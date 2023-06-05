@@ -1,0 +1,1082 @@
+@keyframes moreLinkAnim1 {
+    0% {
+        opacity: 1;
+        right: 50%
+    }
+
+    to {
+        opacity: 0;
+        right: 0
+    }
+}
+
+@keyframes moreLinkAnim1-leave {
+    0% {
+        opacity: 0;
+        right: 0
+    }
+
+    50% {
+        opacity: 0;
+        right: 0
+    }
+
+    to {
+        opacity: 1;
+        right: 50%
+    }
+}
+
+@keyframes moreLinkAnim2 {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%) rotate(90deg)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-50%) rotate(45deg)
+    }
+}
+
+@keyframes moreLinkAnim2-leave {
+    0% {
+        opacity: 1;
+        transform: translateY(-50%) rotate(45deg)
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-50%) rotate(90deg)
+    }
+}
+
+@keyframes moreLinkAnim3 {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%) rotate(-90deg)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-50%) rotate(-45deg)
+    }
+}
+
+@keyframes moreLinkAnim3-leave {
+    0% {
+        opacity: 1;
+        transform: translateY(-50%) rotate(-45deg)
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-50%) rotate(-90deg)
+    }
+}
+
+.section.main-visual {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 120%
+}
+
+@media screen and (max-width: 1024px) {
+    .section.main-visual {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover
+    }
+}
+
+.section.main-visual .fp-tableCell {
+    padding-top: 0
+}
+
+.section.main-visual .container {
+    height: 100%
+}
+
+@media screen and (max-width: 1024px) {
+    .section.main-visual .container {
+        padding:44px 0 42px 0
+    }
+}
+
+.section.main-visual .row,.section.main-visual [class*=" col-"],.section.main-visual [class^=col-] {
+    height: 100%
+}
+
+@media screen and (max-width: 1024px) {
+    .section.main-visual .row,.section.main-visual [class*=" col-"],.section.main-visual [class^=col-] {
+        height:auto
+    }
+}
+
+.section.main-visual [class*=" col-"],.section.main-visual [class^=col-] {
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    border-left: 1px solid rgba(255,255,255,0.14)
+}
+
+.section.main-visual [class*=" col-"]:last-child,.section.main-visual [class^=col-]:last-child {
+    border-right: 1px solid rgba(255,255,255,0.14)
+}
+
+@media screen and (max-width: 1024px) {
+    .section.main-visual [class*=" col-"],.section.main-visual [class^=col-] {
+        border-left:0;
+        padding-top: 40px;
+        padding-bottom: 40px
+    }
+
+    .section.main-visual [class*=" col-"]:last-child,.section.main-visual [class^=col-]:last-child {
+        border-right: 0
+    }
+
+    .section.main-visual [class*=" col-"]:nth-child(n+2),.section.main-visual [class^=col-]:nth-child(n+2) {
+        border-top: 1px solid rgba(255,255,255,0.14)
+    }
+}
+
+@media screen and (min-width: 1024.02px) {
+    .section.main-visual [class*=" col-"]:hover,.section.main-visual [class^=col-]:hover {
+        z-index:2;
+        box-shadow: -1000px -1000px 2000px 2000px rgba(0,0,0,0.35);
+        transition: all 0.3s ease-in-out
+    }
+}
+
+.visual-box {
+    position: relative;
+    width: 100%;
+    color: #fff;
+    text-align: left
+}
+
+@media screen and (max-width: 576px) {
+    .visual-box {
+        padding-right:60px
+    }
+}
+
+.visual-box .icon {
+    display: inline-block;
+    width: 100%;
+    height: 4.5em;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: auto 100%
+}
+
+@media screen and (max-width: 576px) {
+    .visual-box .icon {
+        height:3em
+    }
+}
+
+.visual-box .title {
+    font-size: 2.125em;
+    font-weight: 500;
+    letter-spacing: 0
+}
+
+@media screen and (max-width: 576px) {
+    .visual-box .title {
+        font-size:1.5em
+    }
+}
+
+.visual-box .text {
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5
+}
+
+@media screen and (max-width: 576px) {
+    .visual-box .text {
+        font-size:0.875em
+    }
+}
+
+.visual-box .more-link {
+    font-size: 0.875em;
+    color: #fff;
+    width: 100%;
+    display: inline-flex;
+    align-items: center
+}
+
+@media screen and (max-width: 576px) {
+    .visual-box .more-link {
+        position:absolute;
+        bottom: 0;
+        right: 0;
+        width: auto
+    }
+}
+
+.visual-box .more-link__text {
+    position: relative;
+    display: flex;
+    transition: all 0.2s ease-in-out
+}
+
+.visual-box .more-link__text .before {
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden
+}
+
+.visual-box .more-link__text .after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out
+}
+
+.visual-box .more-link .ex {
+    position: relative;
+    width: 14px;
+    height: 18px;
+    margin-left: 8px
+}
+
+.visual-box .more-link .ex span {
+    display: block;
+    width: 14px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute
+}
+
+.visual-box .more-link .ex span:first-child {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%) rotate(90deg);
+    animation: moreLinkAnim1-leave 0.4s linear 0s 1 alternate forwards
+}
+
+.visual-box .more-link .ex span:nth-child(2) {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%)
+}
+
+.visual-box .more-link .ex span:nth-child(3) {
+    width: 7.0710678119px;
+    top: 50%;
+    right: 0;
+    opacity: 0;
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: right center;
+    animation: moreLinkAnim2-leave 0.2s linear 0s 1 alternate forwards
+}
+
+.visual-box .more-link .ex span:nth-child(4) {
+    width: 7.0710678119px;
+    top: 50%;
+    right: 0;
+    opacity: 0;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: right center;
+    animation: moreLinkAnim3-leave 0.2s linear 0s 1 alternate forwards
+}
+
+@media screen and (min-width: 1024.02px) {
+    .main-visual .row [class*=" col-"]:hover .more-link__text .before,.main-visual .row [class^=col-]:hover .more-link__text .before {
+        width:0;
+        height: 0;
+        opacity: 0
+    }
+
+    .main-visual .row [class*=" col-"]:hover .more-link__text .after,.main-visual .row [class^=col-]:hover .more-link__text .after {
+        white-space: nowrap;
+        width: 77px;
+        height: auto;
+        opacity: 1
+    }
+
+    .main-visual .row [class*=" col-"]:hover .ex span:first-child,.main-visual .row [class^=col-]:hover .ex span:first-child {
+        right: 0;
+        opacity: 0;
+        animation: moreLinkAnim1 0.2s linear 0s 1 normal forwards
+    }
+
+    .main-visual .row [class*=" col-"]:hover .ex span:nth-child(3),.main-visual .row [class^=col-]:hover .ex span:nth-child(3) {
+        animation: moreLinkAnim2 0.2s linear 0.2s 1 normal forwards
+    }
+
+    .main-visual .row [class*=" col-"]:hover .ex span:nth-child(4),.main-visual .row [class^=col-]:hover .ex span:nth-child(4) {
+        animation: moreLinkAnim3 0.2s linear 0.2s 1 normal forwards
+    }
+}
+
+.main-title--h1 {
+    font-size: 2.75em;
+    font-weight: 700;
+    color: #222
+}
+
+@media screen and (max-width: 1024px) {
+    .main-title--h1 {
+        font-size:2.25em
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .main-title--h1 {
+        font-size:2em
+    }
+}
+
+.main-text--18 {
+    font-size: 1.125em;
+    font-weight: 300;
+    line-height: 1.5555555556;
+    color: #333
+}
+
+@media screen and (max-width: 1024px) {
+    .main-text--18 {
+        font-size:1em
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .main-text--18 {
+        font-size:0.875em
+    }
+}
+
+.section .swiper-pagination {
+    top: inherit;
+    bottom: 3.25em;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+@media screen and (max-width: 1024px) {
+    .section .swiper-pagination {
+        position:static;
+        transform: none
+    }
+}
+
+@media screen and (max-height: 896px) {
+    .section .swiper-pagination {
+        position:static;
+        transform: none;
+        margin-top: 1.5em
+    }
+}
+
+.section .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background-color: rgba(41,41,41,0.5);
+    margin: 0 16px!important
+}
+
+.section .swiper-pagination-bullet-active {
+    background-color: #111
+}
+
+.section .swiper-pagination.type-white .swiper-pagination-bullet {
+    background-color: rgba(102,102,102,0.7)
+}
+
+.section .swiper-pagination.type-white .swiper-pagination-bullet-active {
+    background-color: #fff
+}
+
+@media screen and (max-width: 1500px) {
+    .section .swiper-button-next,.section .swiper-button-prev {
+        transform:translateX(0)
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .section .swiper-pagination {
+        margin-top:1.5em
+    }
+
+    .section .swiper-pagination-bullet {
+        margin: 0 8px!important
+    }
+
+    .section .swiper-button-prev {
+        display: none;
+        transform: translateX(-50%)
+    }
+
+    .section .swiper-button-next {
+        display: none;
+        transform: translateX(50%)
+    }
+}
+
+.cloud-swiper {
+    position: relative;
+    text-align: center
+}
+
+.solution-swiper {
+    position: relative;
+    text-align: center
+}
+
+.platform-swiper {
+    position: relative
+}
+
+.ref-swiper {
+    position: relative
+}
+
+.cursor-pointer {
+    cursor: pointer!important
+}
+
+@media screen and (max-width: 1024px) {
+    .section {
+        height:auto!important
+    }
+
+    .section .container {
+        padding-top: 2.25em!important;
+        padding-bottom: 2.25em
+    }
+}
+
+@media screen and (max-height: 896px) {
+    .section {
+        height:auto!important
+    }
+
+    .section .container {
+        padding-top: 2.25em!important;
+        padding-bottom: 2.25em
+    }
+
+    .section.main-visual {
+        height: 100vh!important;
+        max-height: 56.25vw
+    }
+
+    .section.main-visual .container {
+        padding-top: 0!important;
+        padding-bottom: 0!important
+    }
+}
+
+.section-title {
+    position: relative
+}
+
+.section-title .read-more {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 10px
+}
+
+@media screen and (max-width: 1024px) {
+    .section-title .read-more {
+        position:static;
+        margin-top: 1.5em
+    }
+}
+
+.section .fp-tableCell {
+    padding-top: 94px;
+    vertical-align: top
+}
+
+@media screen and (max-width: 1024px) {
+    .section .fp-tableCell {
+        height:auto!important;
+        padding-top: 0!important
+    }
+}
+
+@media screen and (max-height: 896px) {
+    .section .fp-tableCell {
+        height:auto!important;
+        padding-top: 0!important
+    }
+}
+
+.section.fp-auto-height .fp-tableCell {
+    padding-top: 0!important
+}
+
+.main-title-box {
+    position: relative
+}
+
+.main-title-box .read-more {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%)
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    color: #333
+}
+
+.read-more .ex {
+    display: block;
+    width: 1.25em;
+    height: 0.75em;
+    margin-left: 0.5em;
+    transition: all 0.3s ease-in-out;
+    background-image: url(https://jihoosoft.com/assets/images/main/read_more_ico.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto
+}
+
+.read-more:hover .ex {
+    transform: translateX(15%)
+}
+
+.read-more.type-white {
+    color: #fff
+}
+
+.read-more.type-white .text {
+    color: #fff
+}
+
+@media screen and (min-width: 1024px) and (min-height:896px) {
+    .section .main-text--18:not(.inanimate),.section .main-title--1:not(.inanimate),.section .main-title--h1:not(.inanimate) {
+        transform:translateY(20%);
+        opacity: 0;
+        transition: all 0.4s ease-in-out
+    }
+}
+
+@media screen and (min-width: 1024px) and (min-height:896px) {
+    .section.fp-completely .main-text--18:not(.inanimate),.section.fp-completely .main-title--1:not(.inanimate),.section.fp-completely .main-title--h1:not(.inanimate) {
+        transform:translateY(0);
+        opacity: 1;
+        transition: all 0.4s ease-in-out
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .section.active .main-text--18:not(.inanimate),.section.active .main-title--1:not(.inanimate),.section.active .main-title--h1:not(.inanimate) {
+        transform:translateY(0);
+        opacity: 1;
+        transition: all 0.4s ease-in-out
+    }
+}
+
+.main-body .header {
+    background-color: #fff
+}
+
+.main-body .header .nav .depth-1>.link {
+    color: #222
+}
+
+@media screen and (max-width: 1024px) {
+    .main-body .header.scrolled {
+        background-color:#fff!important
+    }
+
+    .main-body .header.scrolled .nav-mobile__btn {
+        color: #222!important
+    }
+}
+
+.main-body.fp-viewing-firstPage .header,.main-body.fp-viewing-fourthPage .header {
+    background-color: transparent
+}
+
+.main-body.fp-viewing-firstPage .header .nav .depth-1>.link,.main-body.fp-viewing-fourthPage .header .nav .depth-1>.link {
+    color: #fff
+}
+
+.main-body.fp-viewing-firstPage .header .logo .white,.main-body.fp-viewing-fourthPage .header .logo .white {
+    display: block
+}
+
+.main-body.fp-viewing-firstPage .header .logo .origin,.main-body.fp-viewing-fourthPage .header .logo .origin {
+    display: none
+}
+
+@media screen and (min-width: 1024.02px) {
+    .main-body.fp-viewing-firstPage .header:hover,.main-body.fp-viewing-fourthPage .header:hover {
+        background-color:#fff
+    }
+
+    .main-body.fp-viewing-firstPage .header:hover .white,.main-body.fp-viewing-fourthPage .header:hover .white {
+        display: none
+    }
+
+    .main-body.fp-viewing-firstPage .header:hover .origin,.main-body.fp-viewing-fourthPage .header:hover .origin {
+        display: block
+    }
+
+    .main-body.fp-viewing-firstPage .header:hover .nav .depth-1>.link,.main-body.fp-viewing-fourthPage .header:hover .nav .depth-1>.link {
+        color: #222
+    }
+}
+
+.main-body.fp-viewing-fifthPage #fp-nav ul li a span,.main-body.fp-viewing-secondPage #fp-nav ul li a span,.main-body.fp-viewing-thirdPage #fp-nav ul li a span {
+    background-color: #111
+}
+
+.main-body.fp-viewing-fifthPage #fp-nav ul li a.active,.main-body.fp-viewing-secondPage #fp-nav ul li a.active,.main-body.fp-viewing-thirdPage #fp-nav ul li a.active {
+    border-color: #111
+}
+
+.cloud-service {
+    transition: all 0.3s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+
+.cloud-service .container {
+    padding-top: 3em
+}
+
+.cloud-service.type-white .swiper-button-next,.cloud-service.type-white .swiper-button-prev {
+    color: #fff
+}
+
+.solution {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+
+.solution .container {
+    padding-top: 3em
+}
+
+@media screen and (max-width: 1024px) {
+    .solution {
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: 100% auto
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .solution-swiper {
+        max-width:90%;
+        margin: 0 auto;
+        padding: 0 50px
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .solution-swiper {
+        max-width:100%;
+        padding: 0 20px
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .solution-swiper {
+        padding:0
+    }
+}
+
+.platform {
+    background-image: url(https://jihoosoft.com/assets/images/main/section4_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+.read-more.type-white .ex {
+    background-image: url(https://jihoosoft.com/assets/images/main/read_more_ico_w-2x.png);
+}
+
+.platform .container {
+    padding-top: 5em
+}
+
+@media screen and (max-width: 1024px) {
+    .platform .container {
+        padding-top:2.5em
+    }
+}
+
+.platform .swiper-wrapper {
+    align-items: stretch
+}
+
+.platform .swiper-wrapper .swiper-slide {
+    height: auto
+}
+
+.platform-box {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    height: 100%
+}
+
+@media screen and (max-width: 1024px) {
+    .platform-box {
+        flex-direction:row;
+        height: auto
+    }
+}
+
+.platform-box .thumb {
+    flex: 0 0 auto;
+    height: auto;
+    display: block;
+    position: relative;
+    overflow: hidden
+}
+
+.platform-box .thumb:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%
+}
+
+.platform-box .thumb>img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 1000%;
+    min-height: 1000%;
+    max-width: none;
+    max-height: none;
+    transform: translate(-50%,-50%) scale(0.1)
+}
+
+@media screen and (max-width: 1024px) {
+    .platform-box .thumb {
+        flex:0 0 6.25em;
+        width: 6.25em;
+        height: auto
+    }
+}
+
+.platform-box .desc {
+    flex: 1 1 auto;
+    height: 1%;
+    padding: 1.75em;
+    background-color: #fff
+}
+
+@media screen and (max-width: 1024px) {
+    .platform-box .desc {
+        padding:0.75em;
+        height: auto
+    }
+}
+
+.platform-box .desc .title {
+    font-size: 1.25em;
+    font-weight: 500;
+    color: #222
+}
+
+@media screen and (max-width: 1024px) {
+    .platform-box .desc .title {
+        font-size:1em
+    }
+}
+
+.platform-box .desc .text {
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #555
+}
+
+@media screen and (max-width: 1024px) {
+    .platform-box .desc .text {
+        font-size:0.875em
+    }
+}
+
+.platform-box--2 .thumb {
+    display: block;
+    position: relative;
+    overflow: hidden
+}
+
+.platform-box--2 .thumb:after {
+    content: "";
+    display: block;
+    padding-bottom: 87.5%
+}
+
+.platform-box--2 .thumb>img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 1000%;
+    min-height: 1000%;
+    max-width: none;
+    max-height: none;
+    transform: translate(-50%,-50%) scale(0.1)
+}
+
+.platform-swiper {
+    position: relative
+}
+
+@media screen and (max-width: 1600px) {
+    .platform-swiper {
+        max-width:90%;
+        margin: 0 auto;
+        padding: 0 50px
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .platform-swiper {
+        max-width:100%;
+        padding: 0 20px
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .platform-swiper {
+        padding:0
+    }
+}
+
+.ref {
+    background-color: #e8eaed
+}
+
+.ref-top {
+    position: relative;
+    background-color: #e8eaed;
+    height: 50%;
+    max-height: 50%;
+    padding-top: 2.5em
+}
+
+@media screen and (max-height: 896px) {
+    .ref-top {
+        height:auto;
+        padding-bottom: 2.5em
+    }
+}
+
+.ref-bottom {
+    position: relative;
+    background-color: #fff;
+    height: 50%;
+    padding-top: 4.5em
+}
+
+@media screen and (max-width: 1024px) {
+    .ref-bottom {
+        padding-top:0
+    }
+
+    .ref-bottom .container {
+        padding-bottom: 0
+    }
+}
+
+@media screen and (max-height: 896px) {
+    .ref-bottom {
+        height:auto;
+        padding-bottom: 2.5em
+    }
+}
+
+.ref-swiper .img-box {
+    background-color: #fff;
+    display: block;
+    position: relative;
+    overflow: hidden
+}
+
+.ref-swiper .img-box:after {
+    content: "";
+    display: block;
+    padding-bottom: 44.1176470588%
+}
+
+.ref-swiper .img-box>img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    max-width: 100%;
+    max-height: 100%;
+    transform: translate(-50%,-50%)
+}
+
+.main-board {
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999
+}
+
+.main-board-top .link {
+    display: block
+}
+
+.main-board-top .title {
+    font-size: 1.5em;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+    color: #222;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.main-board-top .text {
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #666;
+    letter-spacing: -0.02em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-height: 1.5;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    height: 4.5em
+}
+
+.main-board-top .date {
+    font-size: 0.875em;
+    font-weight: 400;
+    color: #999
+}
+
+.main-board-sub__list .link {
+    display: flex;
+    align-items: center
+}
+
+.main-board-sub__list .title {
+    flex: 1 1 auto;
+    width: 1%;
+    font-size: 1.125em;
+    font-weight: 400;
+    letter-spacing: -0.06em;
+    color: #222;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.main-board-sub__list .date {
+    flex: 0 0 auto;
+    width: auto;
+    font-size: 0.875em;
+    font-weight: 400;
+    color: #999
+}
+
+.main-board-sub__list .item {
+    padding-top: 16px;
+    padding-bottom: 16px
+}
+
+.main-board-sub__list .item+.item {
+    border-top: 1px dashed #cfd8dc
+}
+
+.inquiry-bnr {
+    padding: 2.5em;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-image: url(https://jihoosoft.com/assets/images/main/inquiry_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+
+@media screen and (max-width: 1024px) {
+    .inquiry-bnr {
+        margin-left: -20px;
+        margin-right: -20px;
+        width: calc(100% + 40px)
+    }
+}
+
+.inquiry-bnr .title-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.inquiry-bnr .title {
+    font-size: 1.5625em;
+    font-weight: 500
+}
+
+.inquiry-bnr .text {
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.6)
+}
+
+.inquiry-link .icon--mail {
+    background-image: url(https://jihoosoft.com/assets/images/main/inquiry_ico_mail.svg);
+}
+
+.inquiry-link .icon--tel {
+    background-image: url(https://jihoosoft.com/assets/images/main/inquiry_ico_tel.svg);
+}
+
+.inquiry-link {
+    display: inline-flex;
+    align-items: center
+}
+
+.inquiry-link .icon {
+    flex: 0 0 1.875em
+}
+
+.inquiry-link .icon--mail,.inquiry-link .icon--tel {
+    display: block;
+    width: 1.875em;
+    height: 1.875em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+
+.inquiry-link .text {
+    font-size: 1.125em;
+    color: #fff;
+    padding-left: 4px
+}
