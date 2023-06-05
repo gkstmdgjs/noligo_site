@@ -14,6 +14,7 @@
 
 </script>
 <style>
-    @import "@/css/main.min.css";
-    @import "@/css/common.min.css";
+    @import 'http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css';
+    @import "@/assets/css/main.min.css";
+    @import "@/assets/css/common.min.css";
 </style> 

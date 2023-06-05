@@ -354,7 +354,7 @@
 
 .section .swiper-pagination {
     top: inherit;
-    bottom: 3.25em;
+    bottom: 0.25em;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -381,16 +381,12 @@
     width: 12px;
     height: 12px;
     opacity: 1;
-    background-color: rgba(41,41,41,0.5);
-    margin: 0 16px!important
+    background-color: rgba(102,102,102,0.7);
+    margin: 0 16px!important;
 }
 
 .section .swiper-pagination-bullet-active {
-    background-color: #111
-}
-
-.section .swiper-pagination.type-white .swiper-pagination-bullet {
-    background-color: rgba(102,102,102,0.7)
+    background-color: white
 }
 
 .section .swiper-pagination.type-white .swiper-pagination-bullet-active {
@@ -707,10 +703,6 @@
 }
 .read-more.type-white .ex {
     background-image: url(https://jihoosoft.com/assets/images/main/read_more_ico_w-2x.png);
-}
-
-.platform .container {
-    padding-top: 5em
 }
 
 @media screen and (max-width: 1024px) {

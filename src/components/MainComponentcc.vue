@@ -12,7 +12,7 @@ SwiperCore.use([Navigation, Pagination, loop]);
                     <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
                         <swiper :slides-per-view="1" :navigation="true" :pagination="true" :loop="true">
                             <template #default>
-                                <swiper-slide class="swiper-slide-padding">
+                                <swiper-slide>
                                     <div class="section-title text-center mb-6 mb-lg-10 mb-xl-14">
                                         <h1 class="main-title--h1 text-white">HS.FRAMEWORK</h1>
                                         <p class="main-text--18 text-gray-a">손쉽게 개발하고 효과적으로 유지 관리 할 수 있는 HS 솔루션</p>
@@ -60,7 +60,7 @@ SwiperCore.use([Navigation, Pagination, loop]);
                                         </div>
                                     </div>
                                 </swiper-slide>
-                                <swiper-slide class="swiper-slide-padding">
+                                <swiper-slide>
                                     <div class="section-title text-center mb-6 mb-lg-10 mb-xl-14">
                                         <h1 class="main-title--h1 text-white">HS 솔루션</h1>
                                         <p class="main-text--18 text-gray-a">오픈 라이선스(NodeJS, MSSQL) 기반 웹/모바일 통합 개발 운영 환경 구성</p>
@@ -121,6 +121,15 @@ SwiperCore.use([Navigation, Pagination, loop]);
                                         </div>
                                     </div>
                                 </swiper-slide>
+                            </template>
+                            <template #prev>
+                                <button type="button" class="swiper-button-prev" title="이전 슬라이드로 이동" tabindex="0" role="button" aria-label="Previous slide"></button>
+                            </template>
+                            <template #next>
+                                <div class="swiper-button-next"></div>
+                            </template>
+                            <template #pagination>
+                                <div class="swiper-pagination"></div>
                             </template>
                         </swiper>
                     </div>

@@ -95,7 +95,7 @@
             <ul class="nav-list nav-list--depth1">
               <!------------------------------ about ------------------------------->
               <li class="nav-list__item depth-1">
-                <router-link to="/NEWS" class="link">about</router-link>
+                <router-link to="/NEWS" class="link">About</router-link>
                 <ul class="nav-list nav-list--depth2">
                   <li class="nav-list__item depth-2">
                     <router-link to="/NEWS" class="link">NEWS</router-link>
