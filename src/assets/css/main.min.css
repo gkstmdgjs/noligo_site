@@ -492,7 +492,7 @@
 }
 
 .section .fp-tableCell {
-    padding-top: 94px;
+    padding-top: 50px;
     vertical-align: top
 }
 
@@ -696,7 +696,7 @@
 }
 
 .platform {
-    background-image: url(https://jihoosoft.com/assets/images/main/section4_bg.jpg);
+    background-image: url('@/assets/img/Background/Main.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover
@@ -868,7 +868,7 @@
     background-color: #e8eaed;
     height: 50%;
     max-height: 50%;
-    padding-top: 2.5em
+    
 }
 
 @media screen and (max-height: 896px) {

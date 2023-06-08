@@ -23480,10 +23480,6 @@ a.bg-dark:focus,a.bg-dark:hover,button.bg-dark:focus,button.bg-dark:hover {
         padding-right: 5rem!important
     }
 
-    .pb-lg-20,.py-lg-20 {
-        padding-bottom: 5rem!important
-    }
-
     .pl-lg-20,.px-lg-20 {
         padding-left: 5rem!important
     }
@@ -34641,48 +34637,6 @@ html {
     src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');
 }
 
-@font-face {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 100;
-    src: url(//fonts.gstatic.com/ea/roboto/v2/Roboto-Black.woff2) format('woff2'),url(//fonts.gstatic.com/ea/roboto/v2/Roboto-Black.woff) format('woff'),url(//fonts.gstatic.com/ea/roboto/v2/Roboto-Black.otf) format('opentype');
-}
-
-@font-face {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 300;
-    src: url(//fonts.gstatic.com/ea/roboto/v2/Roboto-Light.woff2) format('woff2'),url(//fonts.gstatic.com/ea/roboto/v2/Roboto-Light.woff) format('woff'),url(//fonts.gstatic.com/ea/roboto/v2/Roboto-Light.otf) format('opentype');
-}
-
-@font-face {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    src: url(//fonts.gstatic.com/ea/roboto/v2/Roboto-Regular.woff2) format('woff2'),url(//fonts.gstatic.com/ea/roboto/v2/Roboto-Regular.woff) format('woff'),url(//fonts.gstatic.com/ea/roboto/v2/Roboto-Regular.otf) format('opentype');
-}
-
-@font-face {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 500;
-    src: url(//fonts.gstatic.com/ea/roboto/v2/Roboto-Medium.woff2) format('woff2'),url(//fonts.gstatic.com/ea/roboto/v2/Roboto-Medium.woff) format('woff'),url(//fonts.gstatic.com/ea/roboto/v2/Roboto-Medium.otf) format('opentype');
-}
-
-@font-face {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 700;
-    src: url(//fonts.gstatic.com/ea/roboto/v2/Roboto-Bold.woff2) format('woff2'),url(//fonts.gstatic.com/ea/roboto/v2/Roboto-Bold.woff) format('woff'),url(//fonts.gstatic.com/ea/roboto/v2/Roboto-Bold.otf) format('opentype');
-}
-
-@font-face {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 900;
-    src: url(//fonts.gstatic.com/ea/roboto/v2/roboto-Black.woff2) format('woff2'),url(//fonts.gstatic.com/ea/roboto/v2/Roboto-Black.woff) format('woff'),url(//fonts.gstatic.com/ea/roboto/v2/Roboto-Black.otf) format('opentype');
-}
-
 html {
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
@@ -38432,7 +38386,7 @@ img.mfp-img {
 
 .swiper-button-next,.swiper-button-prev {
     position: absolute;
-    top: 58%;
+    top: 52%;
     width: calc(var(--swiper-navigation-size) / 44 * 27);
     height: var(--swiper-navigation-size);
     margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
@@ -41097,83 +41051,83 @@ html {
 }
 
 .layout-proc.hr-proc .proc-item--1 .v-arrow,.layout-proc.hr-proc .proc-item--1 .v-line {
-    background-color: #edba01
+    background-color: #01b0ed
 }
 
 .layout-proc.hr-proc .proc-item--1 .v-arrow:after {
-    border-top-color: #edba01
+    border-top-color: #01b0ed
 }
 
 .layout-proc.hr-proc .proc-item--1 .rounded-title {
-    background-color: #edba01
+    background-color: #01b0ed
 }
 
 .layout-proc.hr-proc .proc-item--1 .text-box--1 {
-    color: #edba01
+    color: #01b0ed
 }
 
 .layout-proc.hr-proc .proc-item--1 .text-box--1,.layout-proc.hr-proc .proc-item--1 .text-box--2 {
-    border-color: #edba01
+    border-color: #01b0ed
 }
 
 .layout-proc.hr-proc .proc-item--2 .v-arrow,.layout-proc.hr-proc .proc-item--2 .v-line {
-    background-color: #e3af01
+    background-color: #0190ed
 }
 
 .layout-proc.hr-proc .proc-item--2 .v-arrow:after {
-    border-top-color: #e3af01
+    border-top-color: #0190ed
 }
 
 .layout-proc.hr-proc .proc-item--2 .rounded-title {
-    background-color: #e3af01
+    background-color: #0190ed
 }
 
 .layout-proc.hr-proc .proc-item--2 .text-box--1 {
-    color: #e3af01
+    color: #0190ed
 }
 
 .layout-proc.hr-proc .proc-item--2 .text-box--1,.layout-proc.hr-proc .proc-item--2 .text-box--2 {
-    border-color: #e3af01
+    border-color: #0190ed
 }
 
 .layout-proc.hr-proc .proc-item--3 .v-arrow,.layout-proc.hr-proc .proc-item--3 .v-line {
-    background-color: #d09901
+    background-color: #0191d0
 }
 
 .layout-proc.hr-proc .proc-item--3 .v-arrow:after {
-    border-top-color: #d09901
+    border-top-color: #0191d0
 }
 
 .layout-proc.hr-proc .proc-item--3 .rounded-title {
-    background-color: #d09901
+    background-color: #0191d0
 }
 
 .layout-proc.hr-proc .proc-item--3 .text-box--1 {
-    color: #d09901
+    color: #0191d0
 }
 
 .layout-proc.hr-proc .proc-item--3 .text-box--1,.layout-proc.hr-proc .proc-item--3 .text-box--2 {
-    border-color: #d09901
+    border-color: #0191d0
 }
 
 .layout-proc.hr-proc .proc-item--4 .v-arrow,.layout-proc.hr-proc .proc-item--4 .v-line {
-    background-color: #c28a01
+    background-color: #0164c2
 }
 
 .layout-proc.hr-proc .proc-item--4 .v-arrow:after {
-    border-top-color: #c28a01
+    border-top-color: #0164c2
 }
 
 .layout-proc.hr-proc .proc-item--4 .rounded-title {
-    background-color: #c28a01
+    background-color: #0164c2
 }
 
 .layout-proc.hr-proc .proc-item--4 .text-box--1 {
-    color: #c28a01
+    color: #0164c2
 }
 
 .layout-proc.hr-proc .proc-item--4 .text-box--1,.layout-proc.hr-proc .proc-item--4 .text-box--2 {
-    border-color: #c28a01
+    border-color: #0164c2
 }
 
 .tab--box>.tab-header {
@@ -46883,4 +46837,25 @@ table td.text_left {
 
 .ScrollContainer{
     opacity: 0;
+}
+.company_img{
+    margin-right: 5px;
+    width: 250px !important;
+}
+.company_img_top{
+    margin-top: 5px;
+}
+.AppImg{
+    height: 500px;
+    padding: 10px;
+}
+.image-container{
+    display: inline-block;
+}
+.NoligoImg{
+    height: 700px;
+}
+
+.swiper-slide-content {
+    text-align: center;
 }

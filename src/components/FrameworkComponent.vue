@@ -44,7 +44,7 @@
             </p>
           </div>
           <div class="text-center">
-            <img :src="require('@/assets/Framework/FirstIntroduction.png')" alt="" class="ScrollContainer">
+            <img :src="require('@/assets/img/Framework/FirstIntroduction.png')" alt="" class="ScrollContainer">
           </div>
         </div>
       </section>
@@ -60,7 +60,7 @@
             </p>
           </div>
           <div class="text-center">
-            <img :src="require('@/assets/Framework/DevicePlayform.png')" alt="" class="ScrollContainer">
+            <img :src="require('@/assets/img/Framework/DevicePlayform.png')" alt="" class="ScrollContainer">
           </div>
         </div>
       </section>
@@ -77,7 +77,7 @@
             </p>
           </div>
           <div class="text-center">
-            <img :src="require('@/assets/Framework/Interlock.png')" alt="" class="ScrollContainer">
+            <img :src="require('@/assets/img/Framework/Interlock.png')" alt="" class="ScrollContainer">
           </div>
         </div>
       </section>
@@ -94,7 +94,7 @@
             </p>
           </div>
           <div class="text-center">
-            <img :src="require('@/assets/Framework/Flow.png')" alt="" class="ScrollContainer">
+            <img :src="require('@/assets/img/Framework/Flow.png')" alt="" class="ScrollContainer">
           </div>
         </div>
       </section>
