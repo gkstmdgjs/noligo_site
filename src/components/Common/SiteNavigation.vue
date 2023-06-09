@@ -48,11 +48,13 @@
   onMounted(() => {
     
     const nav = document.querySelector('.nav.gnb-drop--all');
+    const depths = document.querySelectorAll('.nav-list.nav-list--depth2');
     const bg = document.querySelector('.nav__bg');
     const origin = document.querySelector('.origin');
 
     nav.addEventListener('mouseenter', () => handleMouseover(true, 'block', 0 , 10, 200));
     bg.addEventListener('mouseleave', () => handleMouseover(false, 'none', 1, 10, 200));
+    depths.forEach(depth => {depth.addEventListener('mouseleave', () => handleMouseover(false, 'none', 1, 10, 200))});
     origin.addEventListener('click', () => onClassRemove());
 
     //on 클래스 remove
@@ -95,10 +97,10 @@
             <ul class="nav-list nav-list--depth1">
               <!------------------------------ about ------------------------------->
               <li class="nav-list__item depth-1">
-                <router-link to="/NEWS" class="link">About</router-link>
+                <router-link to="/HSsolutionNews" class="link">About</router-link>
                 <ul class="nav-list nav-list--depth2">
                   <li class="nav-list__item depth-2">
-                    <router-link to="/NEWS" class="link">NEWS</router-link>
+                    <router-link to="/HSsolutionNews" class="link">NEWS</router-link>
                   </li>
                   <li class="nav-list__item depth-2">
                     <router-link to="/CompanyLocation" class="link">오시는 길</router-link>

@@ -159,10 +159,10 @@ SwiperCore.use([Navigation, Pagination, loop]);
                         <div class="col-12 col-lg-8 px-0 py-3 p-lg-5" >
                             <div class="main-title-box ml-xxl-n5 mr-0" >
                                 <h1 class="main-title--1 inanimate">NEWS</h1>
-                                <a href="../about/news.html" class="read-more" title="더보기">
+                                <router-link to="/FrameworkComponent" class="read-more" title="더보기">
                                     <span class="text">READ MORE</span>
                                     <span class="ex"></span>
-                                </a>
+                                </router-link>
                             </div>
                             <div class="row ml-0 ml-xxl-n5 mr-0 main-board">
                                 <div class="col-12 col-lg-6 py-3 px-0 px-lg-0 main-board-top">

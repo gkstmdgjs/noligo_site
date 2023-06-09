@@ -1,39 +1,53 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onMounted } from 'vue';
 
-const map = ref(null);
+onMounted(() => {
+  if (window.kakao && window.kakao.maps) {
+    initMap();
+  } else {
+    const script = document.createElement('script');
+    script.onload = () => kakao.maps.load(initMap);
+    script.src =
+      '//dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=e04e828f6f53f008f3abdc6af4abaeba&libraries=services';
+    document.head.appendChild(script);
+  }
+});
 
-// const loadScript = () => {
-//   const script = document.createElement('script');
-//   script.src = '//dapi.kakao.com/v2/maps/sdk.js?appkey=e04e828f6f53f008f3abdc6af4abaeba&autload=false';
-//   script.onload = loadMap;
-//   document.head.appendChild(script);
-// };
+function initMap() {
+  const container = document.getElementById('map-1');
+  const options = {
+    center: new kakao.maps.LatLng(33.450701, 126.570667),
+    level: 3,
+  };
 
-// const loadMap = () => {
-//   const container = document.getElementById('map');
-//   const options = {
-//     center: new kakao.maps.LatLng(33.450701, 126.570667),
-//     level: 3
-//   };
+  //지도 객체를 등록합니다.
+  //지도 객체는 반응형 관리 대상이 아니므로 initMap에서 선언합니다.
+  const map = new kakao.maps.Map(container, options);
+  const geocoder = new kakao.maps.services.Geocoder();
 
-//   map.value = new kakao.maps.Map(container, options);
-//   loadMarker();
-// };
+  geocoder.addressSearch('다산중앙로 19번길 25-23', function(result, status) {
+    // 정상적으로 검색이 완료됐으면 
+    if (status === kakao.maps.services.Status.OK) {
 
-// const loadMarker = () => {
-//   const markerPosition = new kakao.maps.LatLng(33.450701, 126.570667);
-//   const marker = new kakao.maps.Marker({ position: markerPosition });
-//   marker.setMap(map.value);
-// };
+    var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
 
-// onMounted(() => {
-//   if (window.kakao && window.kakao.maps) {
-//     loadMap();
-//   } else {
-//     loadScript();
-//   }
-// });
+    // 결과값으로 받은 위치를 마커로 표시합니다
+    var marker = new kakao.maps.Marker({
+        map: map,
+        position: coords
+    });
+
+    // 인포윈도우로 장소에 대한 설명을 표시합니다
+    var infowindow = new kakao.maps.InfoWindow({
+        content: '<div style="width:150px;text-align:center;padding:6px 0;">HS 솔루션</div>'
+    });
+    infowindow.open(map, marker);
+
+    // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+    map.setCenter(coords);
+    } 
+  });
+}
 </script>
 
 <template>
@@ -53,8 +67,8 @@ const map = ref(null);
       <section class="section">
         <div class="container">
           <p class="common-text--24 text-gray-3 text-center mb-5 wow fadeInUp">다산중앙로 19번길 25-23 (다산진건 블루웨일 지식산업센터 2차) 445호</p>
+          <div id="map-1" class="map wow fadeInUp"></div>
         </div>
-        <div id="map"></div>
       </section>
     </main>
 </template>
