@@ -1,26 +1,15 @@
 <script setup>
 
-import { onMounted, ref } from 'vue'
+	import { onMounted} from 'vue'
+	import { initPage, data } from './Common/common'
 
-const data = ref([])
+	onMounted(() => {
+		initPage()
+	})
 
-onMounted(() => {
-	initPage()
-})
-
-async function initPage() {
-	const params = {
-		VIEW_CODE: '',
-		PREF: 'BOARD',
-		METHOD_CODE: 'NOLIGO_SITE',
-		DATA: {
-			PAGE_NO: '1',
-			PAGE_SIZE: '15',
-		},
+	function decreaseTotalCount(count, val) {
+		return count - val;
 	}
-	const rtn = await ng_core.common.getData(params);
-	data.value = rtn.data.rtndata;
-}
 
 </script>
 <template>
@@ -42,7 +31,6 @@ async function initPage() {
       <section class="section">
         <div class="container">
         	<table class="table_board_for type_d">
-          		<caption><span class="hidden">일반 게시판 입니다.</span></caption>
           		<colgroup>
 					<col width="8%">
 					<col width="*%;">
@@ -57,9 +45,9 @@ async function initPage() {
           		</thead>
           		<tbody>
             		<tr class="" v-for="(item, index) in data" :key="index">
-              			<td>{{ item.ROWNUM }}</td>
+              			<td>{{ decreaseTotalCount(item.TOTAL_COUNT, index) }}</td>
               			<td class="text_left">
-							<a href="/about/news.html?bmain=view&amp;uid=14&amp;search=%26page%3D1">{{ item.SUBJECT }}</a>
+							<router-link :to="`/HSsolutionNewsDetails?IDX=${item.IDX}`">{{ item.SUBJECT }}</router-link>
 						</td>
 			            <td>{{ item.CREATE_DATE.slice(0,10) }}</td>
 			        </tr>
@@ -68,7 +56,10 @@ async function initPage() {
 			<div class="paging-area">
 				<ul>
 					<li>
-						<a href="/about/news.html?page=1" class="prev-first" alt="첫 페이지로 이동"><span>맨앞으로</span></a></li><li><a class="active">1</a>
+						<a href="/about/news.html?page=1" class="prev-first" alt="첫 페이지로 이동"><span>맨앞으로</span></a>
+					</li>
+					<li>
+						<a class="active">1</a>
 					</li>  
 					<li>
 						<a href="/about/news.html?page=2">2</a>

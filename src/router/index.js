@@ -1,6 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import MainComponent from "@/components/MainComponent.vue";
 import HSsolutionNews from "@/components/HSsolutionNews.vue";
+import HSsolutionNewsDetails from "@/components/HSsolutionNewsDetails.vue";
 import ContaactUs from "@/components/ContaactUs.vue";
 import FrameworkComponent from "@/components/FrameworkComponent.vue";
 import EvnetNoligo from "@/components/EvnetNoligo.vue";
@@ -17,6 +18,11 @@ const routes = [
     path: "/HSsolutionNews",
     name: "HSsolutionNews",
     component: HSsolutionNews,
+  },
+  {
+    path: "/HSsolutionNewsDetails",
+    name: "HSsolutionNewsDetails",
+    component: HSsolutionNewsDetails,
   },
   {
     path: "/CompanyLocation",

@@ -46859,3 +46859,11 @@ table td.text_left {
 .swiper-slide-content {
     text-align: center;
 }
+
+.paging-area a.prev-first {
+    background-image: url('@/assets/img/Common/PrevFirst.png');
+}
+
+.paging-area a.next-last {
+    background-image: url('@/assets/img/Common/NextLast.png');
+}

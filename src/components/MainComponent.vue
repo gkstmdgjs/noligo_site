@@ -1,7 +1,14 @@
 <script setup>
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import SwiperCore, {Navigation, Pagination, loop} from 'swiper/core';
-SwiperCore.use([Navigation, Pagination, loop]);
+    import { Swiper, SwiperSlide } from 'swiper/vue';
+    import SwiperCore, {Navigation, Pagination, loop} from 'swiper/core';
+    import { onMounted} from 'vue';
+    import { initPage, data } from './Common/common';
+
+    SwiperCore.use([Navigation, Pagination, loop]);
+
+    onMounted(() => {
+		initPage()
+	})
 
 </script>
 <template>
@@ -166,41 +173,26 @@ SwiperCore.use([Navigation, Pagination, loop]);
                             </div>
                             <div class="row ml-0 ml-xxl-n5 mr-0 main-board">
                                 <div class="col-12 col-lg-6 py-3 px-0 px-lg-0 main-board-top">
-                                    <a href="/about/news.html?bmain=view&amp;uid=14" class="link">
-                                        <h2 class="title">다면평가 클라우드 서비스 Season #3 출시</h2>
-                                        <div class="text mt-2">
-                                            <p>지후소프트는 클라우드 다면평가 서비스 Season #3 버젼을 출시하였습니다.&nbsp;</p>
-                                            <p>2017년 출시이래 지속적으로 업그레이드된 서비스를 출시해오고 있습니다.</p>
-                                            <p>특히 이번 Season #3에서는 더욱 고도화된 UI/UX,</p>
-                                            <p>추가 프로그램 수정 개발 없이 설정만으로 고객사의 니즈에 맞는 포맷을 제공할 수 있는 피드백 리포트 설정 기능 등으로</p>
-                                            <p>고객사는 한층 새로워진 다면평가 클라우드서비스를 경험하실 수 있습니다. </p>
-                                            <p>법무부 범죄정책예방국은 전년도에 이어 올해에도 새로워진 다면평가 클라우드 서비스를 활용하여&nbsp;</p>
-                                            <p>상반기 다면평가를 성공적으로 완료하였습니다.&nbsp;</p>
-                                            <p>감사합니다.&nbsp;</p>
-                                        </div>
-                                        <p class="date mt-4">2021.10.07</p>
-                                    </a>
+                                    <template v-for="(item, index) in data" :key="index" >
+                                        <router-link :to="`/HSsolutionNewsDetails?IDX=${item.IDX}`" class="link"  v-if="index == 0">
+                                            <h2 class="title">{{ item.SUBJECT }}</h2>
+                                            <div class="text mt-2">
+                                                {{ item.CONTENTS }}
+                                            </div>
+                                            <p class="date mt-4">{{ item.CREATE_DATE.slice(0,10) }}</p>
+                                        </router-link>
+                                    </template>
                                 </div>
                                 <div class="col-12 col-lg-6 py-3 px-0 px-lg-5 main-board-sub">
                                     <ul class="main-board-sub__list">
-                                        <li class="item">
-                                            <a href="/about/news.html?bmain=view&amp;uid=13" class="link">
-                                                <h2 class="title">[경동인베스트] 평가관리 클라우드서비스 제공 </h2>
-                                                <p class="date">2021.10.07</p>
-                                            </a>
-                                        </li>
-                                        <li class="item">
-                                            <a href="/about/news.html?bmain=view&amp;uid=12" class="link">
-                                                <h2 class="title">[코렌스 그룹] e-HR 구축 계약</h2>
-                                                <p class="date">2021.10.07</p>
-                                            </a>
-                                        </li>
-                                        <li class="item">
-                                            <a href="/about/news.html?bmain=view&amp;uid=11" class="link">
-                                                <h2 class="title">[법무부] 다면평가 서비스 공급</h2>
-                                                <p class="date">2021.10.07</p>
-                                            </a>
-                                        </li>
+                                        <template v-for="(item, index) in data" :key="index" >
+                                            <li v-if="index < 3" class="item">
+                                                <router-link :to="`/HSsolutionNewsDetails?IDX=${item.IDX}`" class="link">
+                                                    <h2 class="title">{{ item.SUBJECT }} </h2>
+                                                    <p class="date">{{ item.CREATE_DATE.slice(0,10) }}</p>
+                                                </router-link>
+                                            </li>
+                                        </template>
                                     </ul>
                                 </div>
                             </div>
