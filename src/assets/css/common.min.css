@@ -34899,6 +34899,7 @@ select {
     zoom:1;background-color: #fff;
     background-repeat: no-repeat;
     background-position: calc(100% - 10px) center;
+    background-image: url('@/assets/img/Common/select_icon.svg');
     background-size: 12px 6px;
     padding-right: 22px!important
 }

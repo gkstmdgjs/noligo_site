@@ -90,7 +90,7 @@
     <header id="header" class="header">
       <div class="container header-wrap">
         <router-link to="/" class="logo d-inline-flex align-items-center h-100" title="메인으로">
-          <img src="@/assets/logo.png" alt="HS 솔루션" class="origin">
+          <img src="@/assets/img/logo.png" alt="HS 솔루션" class="origin">
         </router-link>
         <div class="nav__bg" style="height: 100px"></div>
           <nav class="nav gnb-drop--all">

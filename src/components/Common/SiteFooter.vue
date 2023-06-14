@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-12 col-lg-3">
             <div class="footer-logo">
-              <img src="@/assets/logo.png" alt="JIHOOSOFT">
+              <img src="@/assets/img/logo.png" alt="JIHOOSOFT">
             </div>
           </div>
           <div class="col-12 col-lg-9 mt-3 mt-lg-0">

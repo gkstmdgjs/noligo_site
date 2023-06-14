@@ -1,15 +1,16 @@
 <script setup>
     import { Swiper, SwiperSlide } from 'swiper/vue';
     import SwiperCore, {Navigation, Pagination, loop} from 'swiper/core';
-    import { onMounted} from 'vue';
-    import { initPage, data } from './Common/common';
+    import { onMounted, ref } from 'vue';
+    import { initPage } from './Common/common';
 
     SwiperCore.use([Navigation, Pagination, loop]);
+    const data = ref([]);
 
-    onMounted(() => {
-		initPage()
-	})
-
+    onMounted(async () => {
+        const rtn = await initPage('', '', '', 1, 3)
+        data.value = rtn.data.rtndata
+    })
 </script>
 <template>
     <section class="section platform fp-section fp-table active fp-completely" data-fp-styles="null" data-anchor="fourthPage" style="height: 937px; padding-top: 0px; padding-bottom: 0px;">
@@ -166,7 +167,7 @@
                         <div class="col-12 col-lg-8 px-0 py-3 p-lg-5" >
                             <div class="main-title-box ml-xxl-n5 mr-0" >
                                 <h1 class="main-title--1 inanimate">NEWS</h1>
-                                <router-link to="/FrameworkComponent" class="read-more" title="더보기">
+                                <router-link to="/HSsolutionNews" class="read-more" title="더보기">
                                     <span class="text">READ MORE</span>
                                     <span class="ex"></span>
                                 </router-link>
@@ -201,10 +202,10 @@
                             <div class="inquiry-bnr">
                                 <div class="title-box">
                                     <h3 class="title">제품문의</h3>
-                                    <a href="../contact/index.html" class="read-more type-white" title="자세히 보기">
+                                    <router-link to="/ContaactUs" class="read-more type-white" title="자세히 보기">
                                         <span class="text">READ MORE</span>
                                         <span class="ex"></span>
-                                    </a>
+                                    </router-link>
                                 </div>
                                 <p class="text mt-4">HS 솔루션 전문가로부터 지원받아 보세요!</p>
                                 <div class="mt-4">

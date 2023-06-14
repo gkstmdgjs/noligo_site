@@ -1,5 +1,9 @@
 <script setup>
+import { onMounted } from 'vue';
 
+onMounted(() => {
+
+});
 </script>
 
 <template>
@@ -261,6 +265,7 @@
                   <col width="*">
                 </colgroup>
                 <tbody>
+                  <!-------------------------------------------------- 문의분야 -------------------------------------------------->
                   <tr>
                     <th>문의분야 <span class="text-danger">*</span></th>
                     <td>
@@ -271,65 +276,15 @@
                         </colgroup>
                         <tbody>
                           <tr>
-                            <th rowspan="2">플젝클라우드</th>
-                            <td>
-                              <label class="input-label input-label--checkbox">
-                                <input type="checkbox" name="info1[]" value="플젝(협업툴)">
-                                <span class="input-label__txt">플젝(협업툴)</span>
-                              </label>
-                              <label class="input-label input-label--checkbox ml-2">
-                                <input type="checkbox" name="info1[]" value="전자결재">
-                                <span class="input-label__txt">전자결재</span>
-                              </label>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <label class="input-label input-label--checkbox">
-                                <input type="checkbox" name="info1[]" value="근태관리">
-                                <span class="input-label__txt">근태관리</span>
-                              </label>
-                              <label class="input-label input-label--checkbox ml-2">
-                                <input type="checkbox" name="info1[]" value="HR(종합)">
-                                <span class="input-label__txt">HR(종합)</span>
-                              </label>
-                              <label class="input-label input-label--checkbox ml-2">
-                                <input type="checkbox" name="info1[]" value="평가관리">
-                                <span class="input-label__txt">평가관리</span>
-                              </label>
-                              <label class="input-label input-label--checkbox ml-2">
-                                <input type="checkbox" name="info1[]" value="다면평가">
-                                <span class="input-label__txt">다면평가</span>
-                              </label>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>People Solution</th>
-                            <td>
-                              <label class="input-label input-label--checkbox">
-                                <input type="checkbox" name="info1[]" value="e-HR솔루션(구축형)">
-                                <span class="input-label__txt">e-HR솔루션(구축형)</span>
-                              </label>
-                              <label class="input-label input-label--checkbox ml-2">
-                                <input type="checkbox" name="info1[]" value="급여아웃소싱">
-                                <span class="input-label__txt">급여아웃소싱</span>
-                              </label>
-                              <label class="input-label input-label--checkbox ml-2">
-                                <input type="checkbox" name="info1[]" value="인사/노무 컨설팅">
-                                <span class="input-label__txt">인사/노무 컨설팅</span>
-                              </label>
-                            </td>
-                          </tr>
-                          <tr>
                             <th>통합개발플랫폼</th>
                             <td>
                               <label class="input-label input-label--checkbox">
-                                <input type="checkbox" name="info1[]" value="J.Platform(스마트클라이언트)">
-                                <span class="input-label__txt">J.Platform(스마트클라이언트)</span>
+                                <input type="checkbox" name="info1[]" value="Noligo FW(노리고 프레임)">
+                                <span class="input-label__txt">Noligo FW(노리고 프레임)</span>
                               </label>
                               <label class="input-label input-label--checkbox ml-2">
-                                <input type="checkbox" name="info1[]" value="J.LAMP5(웹/모바일)">
-                                <span class="input-label__txt">J.LAMP5(웹/모바일)</span>
+                                <input type="checkbox" name="info1[]" value="SI">
+                                <span class="input-label__txt">SI</span>
                               </label>
                             </td>
                           </tr>
@@ -337,51 +292,46 @@
                       </table>
                     </td>
                   </tr>
+                  <!-------------------------------------------------- 회사명 -------------------------------------------------->
                   <tr>
                     <th>회사명 <span class="text-danger">*</span></th>
                     <td>
                       <input type="text" name="info2" id="" title="회사명" maxlength="50" class="w-100 w-md-50 w-lg-25" required="">
                     </td>
                   </tr>
+                  <!-------------------------------------------------- 이름/직함 -------------------------------------------------->
                   <tr>
                     <th>이름/직함 <span class="text-danger">*</span></th>
                     <td>
                       <input type="text" name="uname" id="uname" title="이름" maxlength="50" class="w-100 w-md-50 w-lg-25" required="">
                     </td>
                   </tr>
+                  <!-------------------------------------------------- 연락처 -------------------------------------------------->
                   <tr>
                     <th>연락처 <span class="text-danger">*</span></th>
                     <td>
                       <input type="text" name="utel" id="utel" title="연락처" maxlength="50" class="w-100 w-md-50 w-lg-25" onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};" placeholder="- 없이 숫자만 입력 (0101234567)" required="">
                     </td>
                   </tr>
+                  <!-------------------------------------------------- 이메일 -------------------------------------------------->
                   <tr>
                     <th>이메일 <span class="text-danger">*</span></th>
                     <td>
-                      <input type="email" name="uemail" id="uemail" title="이메일" value="" class="w-100 w-md-50 w-lg-25" chk="email_check" placeholder="@ 포함해서 입력 (aaa@aaa.co.kr)" required="">
+                      <input type="email" name="uemail" id="uemail" title="이메일" value="" class="w-100 w-md-50 w-lg-25" chk="email_check" placeholder="@ 포함해서 입력 (aaa@bbb.com)" required="">
                     </td>
                   </tr>
+                  <!-------------------------------------------------- 제목 -------------------------------------------------->
                   <tr>
                     <th>제목 <span class="text-danger">*</span></th>
                     <td>
                       <input type="text" name="title" id="title" title="제목" maxlength="100" class="input_for" required="">
                     </td>
                   </tr>
+                  <!-------------------------------------------------- 내용 -------------------------------------------------->
                   <tr>
                     <th>내용 <span class="text-danger">*</span></th>
                     <td>
-                      <textarea type="textarea" name="content" id="content" title="문의내용" class="area_for" required=""></textarea>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      자동입력방지<br>
-                      코드 <span class="text-danger">*</span>
-                    </th>
-                    <td>
-                                             <input type="hidden" maxlength="100" name="code_org" id="code_org" value="112597">
-                       <span class="code">112597</span>
-                       <input type="text" name="imagecode" placeholder="보안문자" id="imagecode" title="보안문자" class="input_15" required="">
+                      <textarea type="textarea" name="content" id="content" title="문의내용" class="area_for ckeditor" required="" ref="editor"></textarea>
                     </td>
                   </tr>
                 </tbody>

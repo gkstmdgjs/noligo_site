@@ -23,6 +23,7 @@ const routes = [
     path: "/HSsolutionNewsDetails",
     name: "HSsolutionNewsDetails",
     component: HSsolutionNewsDetails,
+    props: true
   },
   {
     path: "/CompanyLocation",
@@ -51,13 +52,20 @@ const routes = [
   },
 ];
 
+const scrollBehavior = (to, savedPosition) => {
+  if (!!to.query.page) {
+    // 페이징 처리 시엔 기본 스크롤 동작 유지
+    return savedPosition;
+  }else{
+    // 그 외 페이지 이동 시, 맨 위로 스크롤
+    return { top: 0 };
+  }
+};
+
 const router = createRouter({
     history: createWebHistory(),
     routes,
-    scrollBehavior(){
-      // 화면 이동 시, 맨 위로
-      return { top: 0 }
-    }
+    scrollBehavior
 });
 
 export default router;

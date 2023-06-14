@@ -1,9 +1,17 @@
 <script setup>
 
+import { onMounted, ref} from 'vue'
 import { useRoute } from 'vue-router';
+import { initPage } from './Common/common'
 
 const route = useRoute();
-const IDX = route.params.IDX;
+const IDX = route.query.IDX;
+const data = ref([]);
+
+onMounted(async () => {
+    const rtn = await initPage(IDX, '', '', '', '')
+    data.value = rtn.data.rtndata[0]
+})
 
 </script>
 <template>
@@ -30,24 +38,17 @@ const IDX = route.params.IDX;
                 <tbody>
                     <tr>
                         <td colspan="2" class="clearfix tit_box">
-                            <p class="tit"> 다면평가 클라우드 서비스 Season #3 출시  </p>
+                            <p class="tit"> {{ data.SUBJECT }}  </p>
                             <p class="tbl_detail_span mt_05">
-                                <span class="name">지후소프트</span>
-                                <span class="date">2021.10.07</span>
+                                <span class="name">{{ data.CREATE_USERID }}</span>
+                                <span class="date">{{ data.CREATE_DATE }}</span>
                             </p>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="2">
                             <div class="board-box">			  
-                                <p>지후소프트는 클라우드 다면평가 서비스 Season #3 버젼을 출시하였습니다.&nbsp;</p>
-                                <p>2017년 출시이래 지속적으로 업그레이드된 서비스를 출시해오고 있습니다.</p>
-                                <p>특히 이번 Season #3에서는 더욱 고도화된 UI/UX,</p>
-                                <p>추가 프로그램 수정 개발 없이 설정만으로 고객사의 니즈에 맞는 포맷을 제공할 수 있는 피드백 리포트 설정 기능 등으로</p>
-                                <p>고객사는 한층 새로워진 다면평가 클라우드서비스를 경험하실 수 있습니다. </p>
-                                <p>법무부 범죄정책예방국은 전년도에 이어 올해에도 새로워진 다면평가 클라우드 서비스를 활용하여&nbsp;</p>
-                                <p>상반기 다면평가를 성공적으로 완료하였습니다.&nbsp;</p>
-                                <p>감사합니다.&nbsp;</p>
+                                {{ data.CONTENTS }}
                             </div>
                         </td>
                     </tr>
@@ -55,26 +56,6 @@ const IDX = route.params.IDX;
             </table>
             <div class="mt_40 text_right board_view_btn_box">
                 <router-link to="/HSsolutionNews" class="btn-type-01">목록</router-link>
-            </div>
-            <div class="border-list-type mt_30">
-                <ul>
-                    <li>
-                        <a href="/about/news.html?bmain=view&amp;uid=13&amp;page=1" title="이전">
-                            <div class="clearfix">
-                                <div class="left list-up-bg list-title">이전</div>
-                                <div class="left w-con">[경동인베스트] 평가관리 클라우드서비스 제공 </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="#" title="다음">
-                            <div class="clearfix">
-                                <div class="left list-down-bg list-title">다음</div>
-                                <div class="left w-con">다음 글이 없습니다.</div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
             </div>
         </div>
       </section>  
