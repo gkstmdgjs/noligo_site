@@ -1,4 +1,9 @@
 <script setup>
+  /**
+	 * file : EvnetNoligo.vue
+	 * 설명 : 이벤트 노리고
+	 */
+  
   import { onMounted } from 'vue';
    
   onMounted(() => {
@@ -25,7 +30,7 @@
 </script>
 <template>
     <!----------------------------------------------------- 중단 메인 이미지 부분 ----------------------------------------------------->
-    <div class="sub-visual" style="background-image: url(https://jihoosoft.com/assets/images/sub/visual_2.jpg)">
+    <div class="sub-visual Service">
       <div class="sub-visual__wrapper container">
         <h1 class="sub-visual__title">EvnetNoligo</h1>
       </div>

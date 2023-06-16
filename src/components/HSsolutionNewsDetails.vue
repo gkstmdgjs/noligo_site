@@ -1,22 +1,26 @@
 <script setup>
+    /**
+	 * file : HSsolutionNewsDetails.vue
+	 * 설명 : News 게시판 상세 화면
+	 */
 
-import { onMounted, ref} from 'vue'
-import { useRoute } from 'vue-router';
-import { initPage } from './Common/common'
+    import { onMounted, ref} from 'vue'
+    import { useRoute } from 'vue-router';
+    import { InitPage } from './Common/common'
 
-const route = useRoute();
-const IDX = route.query.IDX;
-const data = ref([]);
+    const route = useRoute();
+    const IDX = route.query.IDX;
+    const data = ref([]);
 
-onMounted(async () => {
-    const rtn = await initPage(IDX, '', '', '', '')
-    data.value = rtn.data.rtndata[0]
-})
+    onMounted(async () => {
+        const rtn = await InitPage(IDX, '', '', '', '')
+        data.value = rtn.data.rtndata[0]
+    })
 
 </script>
 <template>
 	<!------------------------------ 중단 메인 이미지 부분 ------------------------------------->
-	<div class="sub-visual" style="background-image: url(https://jihoosoft.com/assets/images/sub/visual_1.jpg)">
+	<div class="sub-visual About">
       <div class="sub-visual__wrapper container">
         <h1 class="sub-visual__title">About</h1>
       </div>

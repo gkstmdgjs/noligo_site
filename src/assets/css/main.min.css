@@ -389,6 +389,10 @@
     background-color: white
 }
 
+.swiperBlack .swiper-pagination-bullet-active {
+    background-color: black
+}
+
 .section .swiper-pagination.type-white .swiper-pagination-bullet-active {
     background-color: #fff
 }
@@ -630,6 +634,13 @@
 
     .main-body.fp-viewing-firstPage .header:hover .nav .depth-1>.link,.main-body.fp-viewing-fourthPage .header:hover .nav .depth-1>.link {
         color: #222
+    }
+
+}
+
+@media (max-width: 1024.02px) {
+    .origin {
+        max-width: 70px;
     }
 }
 

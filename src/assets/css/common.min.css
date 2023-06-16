@@ -39039,7 +39039,7 @@ html {
 }
 
 .header .nav .nav-list--depth2 {
-    padding: 1.875rem 0.9375rem;
+    padding-top: 1.5rem;
     position: absolute;
     left: 0;
     right: 0;
@@ -39202,6 +39202,11 @@ html {
     font-size: 1.5rem
 }
 
+.nav-mobile.active .nav-mobile__btn {
+    color: #111;
+    font-size: 1.5rem;
+}
+
 @media screen and (max-width: 1024px) {
     .nav-mobile__btn {
         display:block
@@ -39249,7 +39254,7 @@ html {
 }
 
 .nav-mobile .depth-1>.link.active {
-    background-color: #eb9f32;
+    background-color: #4075d7;
     color: #fff
 }
 
@@ -46867,4 +46872,39 @@ table td.text_left {
 
 .paging-area a.next-last {
     background-image: url('@/assets/img/Common/NextLast.png');
+}
+
+.About {
+    background-image: url('@/assets/img/Background/About.jpg');
+}
+
+.Platform {
+    background-image: url('@/assets/img/Background/Platform.jpg');
+}
+
+.Service {
+    background-image: url('@/assets/img/Background/Service.jpg');
+}
+
+.ContactUs {
+    background-image: url('@/assets/img/Background/ContactUs.jpg');
+}
+
+.SwalButton {
+    background-color: #4075d7 !important;
+    color: #fff !important;
+}
+
+.nav-list.nav-list--depth2.grid {
+  display: grid !important;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 400ms;
+}
+
+.nav-list.nav-list--depth2.grid[aria-hidden="false"] {
+  grid-template-rows: 1fr;
+}
+
+.nav-list.nav-list--depth2.grid .aria{
+  overflow: hidden;
 }

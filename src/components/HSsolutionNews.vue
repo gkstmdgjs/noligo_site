@@ -1,8 +1,12 @@
 <script setup>
+	/**
+	 * file : HSsolutionNews.vue
+	 * 설명 : News
+	 */
 
 	import { watch, ref } from 'vue'
 	import { useRoute } from 'vue-router';
-	import { initPage } from './Common/common'
+	import { InitPage } from './Common/common'
 	import SitePaging from './Common/SitePaging.vue';
 
 	const route = useRoute();
@@ -16,23 +20,21 @@
 	// page에 값 변화가 있다면 재할당
 	watch(() => route.query.page, async (newValue) => {
 		const page = newValue ?? 1;
-		const rtn = await initPage('', selectedOption.value, inputValue.value, page, pageSize);
+		const rtn = await InitPage('', selectedOption.value, inputValue.value, page, pageSize);
 		data.value = rtn.data.rtndata; 
 		totalCnt.value = rtn.data.rtndata[0].TOTAL_COUNT
 	}, {immediate: true});
 
 	async function Search(){
-		const option = selectedOption.value;
-		const input = inputValue.value;
-		const rtn = await initPage('', option, input, 1, pageSize);
+		const rtn = await InitPage('', selectedOption.value, inputValue.value, 1, pageSize);
 		data.value = rtn.data.rtndata; 
-		totalCnt.value = rtn.data.rtndata[0].TOTAL_COUNT
+		totalCnt.value = rtn.data.rtndata[0] ? rtn.data.rtndata[0].TOTAL_COUNT : 0
 	}
 
 </script>
 <template>
 	<!------------------------------ 중단 메인 이미지 부분 ------------------------------------->
-	<div class="sub-visual" style="background-image: url(https://jihoosoft.com/assets/images/sub/visual_1.jpg)">
+	<div class="sub-visual About">
       <div class="sub-visual__wrapper container">
         <h1 class="sub-visual__title">About</h1>
       </div>
@@ -81,7 +83,7 @@
 						<option value="S">제목</option>
 						<option value="C">내용</option>
 					</select>
-					<input type="text" title="검색어" name="find_word" class="input-type-01" v-model="inputValue">
+					<input type="text" title="검색어" name="find_word" class="input-type-01" v-model="inputValue" @keyup.enter="Search">
 					<button class="btn btn-color-01" @click="Search">검색</button>
 				</fieldset>
 			</div>

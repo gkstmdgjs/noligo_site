@@ -2,11 +2,13 @@ import { createWebHistory, createRouter } from "vue-router";
 import MainComponent from "@/components/MainComponent.vue";
 import HSsolutionNews from "@/components/HSsolutionNews.vue";
 import HSsolutionNewsDetails from "@/components/HSsolutionNewsDetails.vue";
-import ContaactUs from "@/components/ContaactUs.vue";
+import ContactUs from "@/components/ContactUs.vue";
 import FrameworkComponent from "@/components/FrameworkComponent.vue";
 import EvnetNoligo from "@/components/EvnetNoligo.vue";
 import NoligoGames from "@/components/NoligoGames.vue";
 import CompanyLocation from "@/components/CompanyLocation.vue";
+import SitePrivacy from "@/components/SitePrivacy.vue";
+import SiteEmailRefusal from "@/components/SiteEmailRefusal.vue";
 
 const routes = [
   {
@@ -46,9 +48,19 @@ const routes = [
     component: NoligoGames,
   },
   {
-    path: "/ContaactUs",
-    name: "ContaactUs",
-    component: ContaactUs,
+    path: "/ContactUs",
+    name: "ContactUs",
+    component: ContactUs,
+  },
+  {
+    path: "/SitePrivacy",
+    name: "SitePrivacy",
+    component: SitePrivacy,
+  },
+  {
+    path: "/SiteEmailRefusal",
+    name: "SiteEmailRefusal",
+    component: SiteEmailRefusal,
   },
 ];
 

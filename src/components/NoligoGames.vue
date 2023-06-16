@@ -1,10 +1,15 @@
 <script setup>
+  /**
+	 * file : NoligoGames.vue
+	 * 설명 : 노리고 게임즈
+	 */
+
   import { onMounted } from 'vue';
   import { Swiper, SwiperSlide } from 'swiper/vue';
-  import SwiperCore, {EffectCoverflow, Navigation, Pagination, loop} from 'swiper/core';
+  import SwiperCore, { Navigation, Pagination, loop } from 'swiper/core';
   import 'swiper/swiper.min.css';
 
-  SwiperCore.use([EffectCoverflow, Navigation, Pagination, loop]);
+  SwiperCore.use([Navigation, Pagination, loop]);
 
   onMounted(() => {
     window.addEventListener('scroll', handleScroll);
@@ -30,7 +35,7 @@
 </script>
 <template>
   <!----------------------------------------------------- 중단 메인 이미지 부분 ----------------------------------------------------->
-  <div class="sub-visual" style="background-image: url(https://jihoosoft.com/assets/images/sub/visual_2.jpg)">
+  <div class="sub-visual Service">
     <div class="sub-visual__wrapper container">
       <h1 class="sub-visual__title">NoligoGames</h1>
     </div>
@@ -49,7 +54,7 @@
         </div>
         <div class="platform-swiper">
             <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
-                <swiper :slides-per-view="1" :navigation="true" :pagination="true" :loop="true" :effect="'coverflow'" :coverflowEffect="{slideShadows: true}">
+                <swiper :slides-per-view="1" :navigation="true" :pagination="true" :loop="true">
                     <swiper-slide class="swiper-slide-padding">
                       <img :src="require('@/assets/img/NoligoGames/Main.png')">
                     </swiper-slide>
@@ -143,8 +148,8 @@
             <h1 class="common-title--h1">NOLI.GO INSTALLATION</h1>
           </div>
           <div class="platform-swiper">
-            <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
-              <swiper :slides-per-view="1" :navigation="true" :pagination="true" :loop="true" :effect="'coverflow'" :coverflowEffect="{slideShadows: true}">
+            <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiperBlack">
+              <swiper :slides-per-view="1" :navigation="true" :pagination="true" :loop="true">
                   <swiper-slide class="swiper-slide-padding" v-for="i in 5" :key="i">
                     <div class="swiper-slide-content">
                       <img :src="require(`@/assets/img/NoligoGames/Installation_${i}.png`)">

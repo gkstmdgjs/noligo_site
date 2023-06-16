@@ -1,5 +1,8 @@
 <script setup>
-
+    /**
+	 * file : SitePaging.vue
+	 * 설명 : 페이징 처리
+	 */
     import { defineProps, computed } from 'vue';
 
     const props = defineProps(['Path', 'totalCount', 'pageSize', 'CurrentPage', 'total2']);

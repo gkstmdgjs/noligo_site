@@ -1,14 +1,19 @@
 <script setup>
+    /**
+	 * file : MainComponent.vue
+	 * 설명 : 메인 화면
+	 */
+
     import { Swiper, SwiperSlide } from 'swiper/vue';
     import SwiperCore, {Navigation, Pagination, loop} from 'swiper/core';
     import { onMounted, ref } from 'vue';
-    import { initPage } from './Common/common';
+    import { InitPage } from './Common/common';
 
     SwiperCore.use([Navigation, Pagination, loop]);
     const data = ref([]);
 
     onMounted(async () => {
-        const rtn = await initPage('', '', '', 1, 3)
+        const rtn = await InitPage('', '', '', 1, 3)
         data.value = rtn.data.rtndata
     })
 </script>
@@ -140,7 +145,7 @@
     <section class="section ref fp-section fp-table active fp-completely" data-fp-styles="null" data-anchor="fifthPage" style="height: 997px; padding-top: 0px; padding-bottom: 0px;">
         <div class="fp-tableCell" style="height: 920px;">
             <!---------------------------------------------------- 업체 이미지 부분 ---------------------------------------------------->
-            <div class="ref-top">
+            <!-- <div class="ref-top">
                 <div class="container">
                     <div class="text-center mb-4"><h1 class="main-title--h1 inanimate">Reference</h1></div>
                     <div class="ref-swiper">
@@ -159,7 +164,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!---------------------------------------------------- 하단 게시판 부분 ---------------------------------------------------->
             <div class="ref-bottom">
                 <div class="container">
@@ -202,22 +207,16 @@
                             <div class="inquiry-bnr">
                                 <div class="title-box">
                                     <h3 class="title">제품문의</h3>
-                                    <router-link to="/ContaactUs" class="read-more type-white" title="자세히 보기">
+                                    <router-link to="/ContactUs" class="read-more type-white" title="자세히 보기">
                                         <span class="text">READ MORE</span>
                                         <span class="ex"></span>
                                     </router-link>
                                 </div>
                                 <p class="text mt-4">HS 솔루션 전문가로부터 지원받아 보세요!</p>
-                                <div class="mt-4">
+                                <div class="mt-3">
                                     <a href="mailto:lhscj2466@gmail.com" class="inquiry-link">
                                         <span class="icon icon--mail"></span>
                                         <span class="text">lhscj2466@gmail.com</span>
-                                    </a>
-                                </div>
-                                <div class="mt-3">
-                                    <a href="tel:01039337249" class="inquiry-link">
-                                        <span class="icon icon--tel"></span>
-                                        <span class="text">02-2038-8064</span>
                                     </a>
                                 </div>
                             </div>

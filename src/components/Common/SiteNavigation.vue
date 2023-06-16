@@ -1,5 +1,10 @@
 <script setup>
-  import { onMounted } from 'vue';
+	/**
+	 * file : SiteNavigation.vue
+	 * 설명 : 상단 바
+	 */
+
+  import { onMounted, ref } from 'vue';
 
   // Navigation 마우스 오버 및 마우스 아웃시 이벤트
   let isAnimating = false; 
@@ -45,16 +50,26 @@
     });
   }
 
+  // 모바일 버전 일때 이벤트
+  const isMobileNavActive = ref(false);
+  const NavTarget = ref(-1);
+  // 메뉴 바 나타내기 여부
+  const toggleMobileNav = () => {
+    isMobileNavActive.value = !isMobileNavActive.value;
+  };
+  // 메뉴바 클릭 시 이벤트
+  const toggleActive = (target) => {
+    NavTarget.value = target;
+  };
   onMounted(() => {
-    
+
     const nav = document.querySelector('.nav.gnb-drop--all');
-    const depths = document.querySelectorAll('.nav-list.nav-list--depth2');
     const bg = document.querySelector('.nav__bg');
-    const origin = document.querySelector('.origin');
+    const origin = document.querySelector('.origin');  
+    const links = document.querySelectorAll('.link.page');
 
     nav.addEventListener('mouseenter', () => handleMouseover(true, 'block', 0 , 10, 200));
     bg.addEventListener('mouseleave', () => handleMouseover(false, 'none', 1, 10, 200));
-    depths.forEach(depth => {depth.addEventListener('mouseleave', () => handleMouseover(false, 'none', 1, 10, 200))});
     origin.addEventListener('click', () => onClassRemove());
 
     //on 클래스 remove
@@ -63,6 +78,15 @@
         element.classList.remove('on');
       });
     }
+
+    // 모바일 버전 메뉴 바 페이지 이동 클릭시 이벤트
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        links.forEach(link => link.classList.remove('active'));
+        link.classList.add('active');
+        isMobileNavActive.value = false;
+      });
+    });
     // Navigation 메뉴 클릭 시, 클래스 명칭 바꾸는 이벤트
     const parentLinks = document.querySelectorAll('.nav-list__item.depth-1');
     parentLinks.forEach(parentLink => {
@@ -86,7 +110,7 @@
 </script>
 
 <template>
-    <!---------------------------- 상단 바 부분 ---------------------------->
+    <!---------------------------- PC 버전 ---------------------------->
     <header id="header" class="header">
       <div class="container header-wrap">
         <router-link to="/" class="logo d-inline-flex align-items-center h-100" title="메인으로">
@@ -130,18 +154,81 @@
               </li>
               <!------------------------------ Contact Us ------------------------------->
               <li class="nav-list__item depth-1">
-                <router-link to="/ContaactUs" class="link">Contact Us</router-link>
+                <router-link to="/ContactUs" class="link">Contact Us</router-link>
                 <ul class="nav-list nav-list--depth2">
                   <li class="nav-list__item depth-2">
-                    <router-link to="/ContaactUs" class="link">Contact Us</router-link>
+                    <router-link to="/ContactUs" class="link">Contact Us</router-link>
                   </li>
                 </ul>
               </li>
             </ul>
           </nav>
-          <button class="nav-mobile__btn" type="button">
+          <button class="nav-mobile__btn" @click="toggleMobileNav">
             <i class="xi-bars"></i>
           </button>
         </div>
     </header> 
+    <!---------------------------- 모바일 버전 ---------------------------->
+    <aside :class="['nav-mobile', { active: isMobileNavActive }]">
+      <div class="nav-mobile__head">
+        <img src="@/assets/img/logo.png" class="origin">
+        <button class="nav-mobile__btn" @click="toggleMobileNav">
+          <i class="xi-close"></i>
+        </button>
+      </div>
+      <div class="nav-mobile__body">
+        <ul class="nav-list nav-list--depth1">
+          <!------------------------------- About ---------------------------------------->
+          <li class="nav-list__item depth-1 _down" @click="toggleActive(NavTarget === 'About' ? null : 'About')">
+            <p :class="['link', { active: NavTarget === 'About' }]">About</p>
+            <ul class="nav-list nav-list--depth2 grid" :aria-hidden="NavTarget !== 'About'">
+              <div class="aria">
+                <li class="nav-list__item depth-2">
+                  <router-link to="/HSsolutionNews" class="link page">NEWS</router-link>
+                </li>
+                <li class="nav-list__item depth-2">
+                  <router-link to="/CompanyLocation" class="link page">오시는 길</router-link>
+                </li>
+              </div>
+            </ul>
+          </li>
+          <!------------------------------- Framework ---------------------------------------->
+          <li class="nav-list__item depth-1 _down" @click="toggleActive(NavTarget === 'Framework' ? null : 'Framework')">
+            <p :class="['link', { active: NavTarget === 'Framework' }]">Framework</p>
+            <ul class="nav-list nav-list--depth2 grid" :aria-hidden="NavTarget !== 'Framework'">
+              <div class="aria">
+                <li class="nav-list__item depth-2">
+                  <router-link to="/FrameworkComponent" class="link page">Noligo FW</router-link>
+                </li>
+              </div>
+            </ul>
+          </li>
+          <!------------------------------- Service ---------------------------------------->
+          <li class="nav-list__item depth-1 _down" @click="toggleActive(NavTarget === 'Service' ? null : 'Service')">
+            <p :class="['link', { active: NavTarget === 'Service' }]">Service</p>
+            <ul class="nav-list nav-list--depth2 grid" :aria-hidden="NavTarget !== 'Service'">
+              <div class="aria">
+                <li class="nav-list__item depth-2">
+                  <router-link to="/EvnetNoligo" class="link page">EventNoligo</router-link>
+                </li>
+                <li class="nav-list__item depth-2">
+                  <router-link to="/NoligoGames" class="link page">Noligo Games</router-link>
+                </li>
+              </div>
+            </ul>
+          </li>
+          <!------------------------------- Contact Us ---------------------------------------->
+          <li class="nav-list__item depth-1 _down" @click="toggleActive(NavTarget === 'ContactUs' ? null : 'ContactUs')">
+            <p :class="['link', { active: NavTarget === 'ContactUs' }]">Contact Us</p>
+            <ul class="nav-list nav-list--depth2 grid" :aria-hidden="NavTarget !== 'ContactUs'">
+              <div class="aria">
+                <li class="nav-list__item depth-2">
+                  <router-link to="/ContactUs" class="link page">Contact Us</router-link>
+                </li>
+              </div>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </aside>
 </template>
