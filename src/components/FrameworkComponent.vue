@@ -49,7 +49,7 @@
             </p>
           </div>
           <div class="text-center">
-            <img :src="require('@/assets/img/Framework/FirstIntroduction.png')" alt="" class="ScrollContainer">
+            <img :src="require('@/assets/img/Framework/FirstIntroduction.png')">
           </div>
         </div>
       </section>
