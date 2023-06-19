@@ -142,8 +142,10 @@
             </div>
         </div>
     </section>
-    <section class="section ref fp-section fp-table active fp-completely" data-fp-styles="null" data-anchor="fifthPage" style="height: 997px; padding-top: 0px; padding-bottom: 0px;">
-        <div class="fp-tableCell" style="height: 920px;">
+    <!-------------------------------------------------------------------------- 업체 추가되면 위에 있는 section 사용할 것 ------------------------------------------------------------------------------------->
+    <!-- <section class="section ref fp-section fp-table active fp-completely" data-fp-styles="null" data-anchor="fifthPage" style="height: 997px; padding-top: 0px; padding-bottom: 0px;"> -->
+    <section class="section fp-section fp-table active fp-completely" data-fp-styles="null" data-anchor="fifthPage" style="height: 500px; padding-top: 0px; padding-bottom: 0px;">
+        <!-- <div class="fp-tableCell" style="height: 920px;"> -->
             <!---------------------------------------------------- 업체 이미지 부분 ---------------------------------------------------->
             <!-- <div class="ref-top">
                 <div class="container">
@@ -224,6 +226,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
     </section>
 </template>

@@ -57,6 +57,27 @@ export async function MakeInquiry(data) {
 } 
 
 /**
+ * 스크롤 이벤트
+ */
+export function handleScroll() {
+  const elements = document.querySelectorAll('.ScrollContainer');
+
+  elements.forEach((element) => {
+    const bottom_of_element = element.offsetTop + element.offsetHeight / 2;
+    const bottom_of_window = window.scrollY + window.innerHeight;
+
+    if (bottom_of_window > bottom_of_element) {
+      element.style.transition = 'opacity 700ms';
+      element.style.opacity = '1';
+    }
+    if (bottom_of_window < bottom_of_element) {
+      element.style.transition = 'opacity 700ms';
+      element.style.opacity = '0';
+    }
+  });
+}
+
+/**
  * 숫자만 입력
  * @param {Object} target text 입력 대상
  */

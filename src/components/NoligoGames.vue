@@ -7,30 +7,12 @@
   import { onMounted } from 'vue';
   import { Swiper, SwiperSlide } from 'swiper/vue';
   import SwiperCore, { Navigation, Pagination, loop } from 'swiper/core';
-  import 'swiper/swiper.min.css';
+  import { handleScroll } from './Common/common';
 
   SwiperCore.use([Navigation, Pagination, loop]);
 
   onMounted(() => {
     window.addEventListener('scroll', handleScroll);
-    // 스크롤 이벤트
-    function handleScroll() {
-      const elements = document.querySelectorAll('.ScrollContainer');
-
-      elements.forEach((element) => {
-        const bottom_of_element = element.offsetTop + element.offsetHeight / 2;
-        const bottom_of_window = window.scrollY + window.innerHeight;
-
-        if (bottom_of_window > bottom_of_element) {
-          element.style.transition = 'opacity 700ms';
-          element.style.opacity = '1';
-        }
-        if (bottom_of_window < bottom_of_element) {
-          element.style.transition = 'opacity 700ms';
-          element.style.opacity = '0';
-        }
-      });
-    }
   });
 </script>
 <template>
