@@ -14,7 +14,7 @@ const routes = [
   {
     path: "/",
     name: "MainComponent",
-    component: MainComponent,
+    component: MainComponent
   },
   {
     path: "/HSsolutionNews",
@@ -77,7 +77,7 @@ const scrollBehavior = (to, savedPosition) => {
 const router = createRouter({
     history: createWebHistory(),
     routes,
-    scrollBehavior
+    scrollBehavior,
 });
 
 export default router;
