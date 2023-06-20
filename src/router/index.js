@@ -25,7 +25,6 @@ const routes = [
     path: "/HSsolutionNewsDetails",
     name: "HSsolutionNewsDetails",
     component: HSsolutionNewsDetails,
-    props: true
   },
   {
     path: "/CompanyLocation",
