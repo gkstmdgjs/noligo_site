@@ -65,8 +65,8 @@
             모드, 맵을 관리하고 추가 설치하기 쉽도록 배포하는 시스템을 제공하고 있습니다.
           </p>
         </div>
-        <div class="row mx-3 mx-xl-n5 mt-8 mt-lg-14 layout-proc hr-proc wow fadeInDown ScrollContainer" style="visibility: visible; animation-name: fadeInDown;">
-          <div class="col-12 col-md-3 p-3 p-xl-5 proc-item--1">
+        <div class="row mx-3 mx-xl-n5 mt-8 mt-lg-14 layout-proc hr-proc wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+          <div class="col-12 col-md-3 p-3 p-xl-5 proc-item--1 ScrollContainer">
             <h3 class="rounded-title">실시간 모드 업데이트</h3>
             <div class="v-line"></div>
             <div class="text-box--1">
@@ -79,7 +79,7 @@
               · 지속적인 업데이트로 효율성을 높임 <br>
             </div>
           </div>
-          <div class="col-12 col-md-3 p-3 p-xl-5 proc-item--2">
+          <div class="col-12 col-md-3 p-3 p-xl-5 proc-item--2 ScrollContainer">
             <h3 class="rounded-title">설치</h3>
             <div class="v-line"></div>
             <div class="text-box--1">
@@ -92,7 +92,7 @@
               · 맵, 텍스쳐(예정), 모드팩<br>
             </div>
           </div>
-          <div class="col-12 col-md-3 p-3 p-xl-5 proc-item--3">
+          <div class="col-12 col-md-3 p-3 p-xl-5 proc-item--3 ScrollContainer">
             <h3 class="rounded-title">빠른 설치</h3>
             <div class="v-line"></div>
             <div class="text-box--1">
@@ -105,7 +105,7 @@
               · 다운로드가 편리하게 가이드를 제공
             </div>
           </div>
-          <div class="col-12 col-md-3 p-3 p-xl-5 proc-item--4">
+          <div class="col-12 col-md-3 p-3 p-xl-5 proc-item--4 ScrollContainer">
             <h3 class="rounded-title">나만의 모드팩 만들기</h3>
             <div class="v-line"></div>
             <div class="text-box--1">
