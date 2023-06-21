@@ -13,7 +13,7 @@ var noligo_baseUrl = {
         device: 'http://10.0.2.2:8800'
     },
     opUrl: {
-        web: 'https://ng.noligo.co.kr',
-        device: 'https://ng.noligo.co.kr',
+        web: 'https://noligo.co.kr',
+        device: 'https://noligo.co.kr',
     }
 }
