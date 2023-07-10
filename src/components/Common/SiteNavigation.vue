@@ -116,7 +116,7 @@
         <router-link to="/" class="logo d-inline-flex align-items-center h-100" title="메인으로">
           <img src="@/assets/img/logo.png" alt="HS 솔루션" class="origin">
         </router-link>
-        <div class="nav__bg" style="height: 100px"></div>
+        <div class="nav__bg" style="height: 115px"></div>
           <nav class="nav gnb-drop--all">
             <ul class="nav-list nav-list--depth1">
               <!------------------------------ about ------------------------------->
@@ -149,6 +149,9 @@
                   </li>
                   <li class="nav-list__item depth-2">
                     <router-link to="/NoligoGames" class="link">Noligo Games</router-link>
+                  </li>
+                  <li class="nav-list__item depth-2">
+                    <router-link to="/CustomSolutions" class="link">Custom Solutions</router-link>
                   </li>
                 </ul>
               </li>
@@ -213,6 +216,9 @@
                 </li>
                 <li class="nav-list__item depth-2">
                   <router-link to="/NoligoGames" class="link page">Noligo Games</router-link>
+                </li>
+                <li class="nav-list__item depth-2">
+                  <router-link to="/CustomSolutions" class="link page">Custom Solutions</router-link>
                 </li>
               </div>
             </ul>

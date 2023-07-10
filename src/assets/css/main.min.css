@@ -1083,3 +1083,7 @@
     color: #fff;
     padding-left: 4px
 }
+
+.multiline-text{
+    white-space: pre-wrap;
+}

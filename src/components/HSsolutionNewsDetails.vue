@@ -51,7 +51,7 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <div class="board-box">			  
+                            <div class="board-box multiline-text">			  
                                 {{ data.CONTENTS }}
                             </div>
                         </td>

@@ -6,6 +6,7 @@ import ContactUs from "@/components/ContactUs.vue";
 import FrameworkComponent from "@/components/FrameworkComponent.vue";
 import EvnetNoligo from "@/components/EvnetNoligo.vue";
 import NoligoGames from "@/components/NoligoGames.vue";
+import CustomSolutions from "@/components/CustomSolutions.vue";
 import CompanyLocation from "@/components/CompanyLocation.vue";
 import SitePrivacy from "@/components/SitePrivacy.vue";
 import SiteEmailRefusal from "@/components/SiteEmailRefusal.vue";
@@ -45,6 +46,11 @@ const routes = [
     path: "/NoligoGames",
     name: "NoligoGames",
     component: NoligoGames,
+  },
+  {
+    path: "/CustomSolutions",
+    name: "CustomSolutions",
+    component: CustomSolutions,
   },
   {
     path: "/ContactUs",

@@ -7,12 +7,16 @@
   import { onMounted } from 'vue';
   import { Swiper, SwiperSlide } from 'swiper/vue';
   import SwiperCore, { Navigation, Pagination, loop } from 'swiper/core';
-  import { handleScroll } from './Common/common';
-
+  import AOS from 'aos';
+  import 'aos/dist/aos.css';
+  
   SwiperCore.use([Navigation, Pagination, loop]);
 
   onMounted(() => {
-    window.addEventListener('scroll', handleScroll);
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+    });
   });
 </script>
 <template>
@@ -35,22 +39,22 @@
           </p>
         </div>
         <div class="platform-swiper">
-            <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
-                <swiper :slides-per-view="1" :navigation="true" :pagination="true" :loop="true">
-                    <swiper-slide class="swiper-slide-padding">
-                      <img :src="require('@/assets/img/NoligoGames/Main.png')">
-                    </swiper-slide>
-                    <swiper-slide class="swiper-slide-padding">
-                      <img :src="require('@/assets/img/NoligoGames/List.png')">
-                    </swiper-slide>
-                    <swiper-slide class="swiper-slide-padding">
-                      <img :src="require('@/assets/img/NoligoGames/Detail.png')">
-                    </swiper-slide>
-                    <swiper-slide class="swiper-slide-padding">
-                      <img :src="require('@/assets/img/NoligoGames/youtube.png')">
-                    </swiper-slide>
-                </swiper>
-            </div>
+          <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+              <swiper :slides-per-view="1" :navigation="true" :pagination="true" :loop="true">
+                  <swiper-slide class="swiper-slide-padding">
+                    <img :src="require('@/assets/img/NoligoGames/Main.png')">
+                  </swiper-slide>
+                  <swiper-slide class="swiper-slide-padding">
+                    <img :src="require('@/assets/img/NoligoGames/List.png')">
+                  </swiper-slide>
+                  <swiper-slide class="swiper-slide-padding">
+                    <img :src="require('@/assets/img/NoligoGames/Detail.png')">
+                  </swiper-slide>
+                  <swiper-slide class="swiper-slide-padding">
+                    <img :src="require('@/assets/img/NoligoGames/youtube.png')">
+                  </swiper-slide>
+              </swiper>
+          </div>
         </div>
       </div>
     </div>
@@ -66,7 +70,7 @@
           </p>
         </div>
         <div class="row mx-3 mx-xl-n5 mt-8 mt-lg-14 layout-proc hr-proc wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-          <div class="col-12 col-md-3 p-3 p-xl-5 proc-item--1 ScrollContainer">
+          <div class="col-12 col-md-3 p-3 p-xl-5 proc-item--1" data-aos="fade-up">
             <h3 class="rounded-title">실시간 모드 업데이트</h3>
             <div class="v-line"></div>
             <div class="text-box--1">
@@ -79,7 +83,7 @@
               · 지속적인 업데이트로 효율성을 높임 <br>
             </div>
           </div>
-          <div class="col-12 col-md-3 p-3 p-xl-5 proc-item--2 ScrollContainer">
+          <div class="col-12 col-md-3 p-3 p-xl-5 proc-item--2" data-aos="fade-up">
             <h3 class="rounded-title">설치</h3>
             <div class="v-line"></div>
             <div class="text-box--1">
@@ -92,7 +96,7 @@
               · 맵, 텍스쳐(예정), 모드팩<br>
             </div>
           </div>
-          <div class="col-12 col-md-3 p-3 p-xl-5 proc-item--3 ScrollContainer">
+          <div class="col-12 col-md-3 p-3 p-xl-5 proc-item--3" data-aos="fade-up">
             <h3 class="rounded-title">빠른 설치</h3>
             <div class="v-line"></div>
             <div class="text-box--1">
@@ -105,7 +109,7 @@
               · 다운로드가 편리하게 가이드를 제공
             </div>
           </div>
-          <div class="col-12 col-md-3 p-3 p-xl-5 proc-item--4 ScrollContainer">
+          <div class="col-12 col-md-3 p-3 p-xl-5 proc-item--4" data-aos="fade-up">
             <h3 class="rounded-title">나만의 모드팩 만들기</h3>
             <div class="v-line"></div>
             <div class="text-box--1">

@@ -38,28 +38,28 @@
                                 <div class="row mx-n2">
                                     <div class="col-12 col-lg-3 p-2">
                                         <div class="platform-box">
-                                            <div class="thumb"><img :src="require('@/assets/img/Main/Infrastructure.jpg')" alt=""></div>
+                                            <div class="thumb"><img :src="require('@/assets/img/Main/LowCode.png')" alt=""></div>
                                             <div class="desc">
-                                                <h3 class="title">개발 LifeCycle 관리</h3>
-                                                <p class="text">분석,설계,개발,배포 단계 Cycle 관리</p>
+                                                <h3 class="title">플랫폼 정의</h3>
+                                                <p class="text">복잡도가 낮고 Low Code를 지향</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-3 p-2">
                                         <div class="platform-box">
-                                            <div class="thumb"><img :src="require('@/assets/img/Main/Device.jpg')" alt=""></div>
+                                            <div class="thumb"><img :src="require('@/assets/img/Main/VariousPlatforms.jpg')" alt=""></div>
                                             <div class="desc">
-                                                <h3 class="title">Smart Client 제공</h3>
-                                                <p class="text">UX기반의 편리한 화면 기능 제공</p>
+                                                <h3 class="title">최소화 및 표준화</h3>
+                                                <p class="text">다양한 플롯폼에서 제공 가능</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-3 p-2">
                                         <div class="platform-box">
-                                            <div class="thumb"><img :src="require('@/assets/img/Main/System.jpg')" alt=""></div>
+                                            <div class="thumb"><img :src="require('@/assets/img/Main/Architecture.png')" alt=""></div>
                                             <div class="desc">
-                                                <h3 class="title">시스템 관리 기능 내장</h3>
-                                                <p class="text">사용자, 보안, 권한, 메뉴 관리 기능 제공</p>
+                                                <h3 class="title">서버 아키텍처</h3>
+                                                <p class="text">운영 효율과 사용자의 편의성을 높임</p>
                                             </div>
                                         </div>
                                     </div>
@@ -67,8 +67,8 @@
                                         <div class="platform-box">
                                             <div class="thumb"><img :src="require('@/assets/img/Main/Development.jpg')" alt=""></div>
                                             <div class="desc">
-                                                <h3 class="title">개발 표준 제공</h3>
-                                                <p class="text">화면, 보고서 개발 Template 제공</p>
+                                                <h3 class="title">주요 기능</h3>
+                                                <p class="text">개발의 편의성 및 운영의 중점</p>
                                             </div>
                                         </div>
                                     </div>
@@ -87,49 +87,46 @@
                                 <div class="row mx-n2">
                                     <div class="col-12 col-lg-3 p-2">
                                         <div class="platform-box platform-box--2">
-                                            <div class="thumb"><img :src="require('@/assets/img/Main/Infrastructure.jpg')" alt=""></div>
+                                            <div class="thumb"><img :src="require('@/assets/img/EventNoligo/Loading.jpg')" alt=""></div>
                                             <div class="desc">
-                                                <h3 class="title">인프라 비용 DOWN</h3>
+                                                <h3 class="title">이벤트 노리고</h3>
                                                 <p class="text">
-                                                    Linux, Maria DB, Apache로 시스템을<br>
-                                                    구축하여 별도의 소프트웨어 구매 비용이<br>
-                                                    발생하지 않음
+                                                    인기 브랜드 이벤트 정보를<br>
+                                                    한 자리에 모은 앱
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-3 p-2">
                                         <div class="platform-box platform-box--2">
-                                            <div class="thumb"><img :src="require('@/assets/img/Main/Device.jpg')" alt=""></div>
+                                            <div class="thumb"><img :src="require('@/assets/img/NoligoGames/Main.png')" alt=""></div>
                                             <div class="desc">
-                                                <h3 class="title">다양한 디바이스 지원</h3>
+                                                <h3 class="title">노리고 게임즈</h3>
                                                 <p class="text">
-                                                    하이브리드 웹앱 구축으로 모바일,<br>
-                                                    태블릿, PC 등 다양한 디바이스 환경<br>
-                                                    지원
+                                                    국민 마이크래프트 커뮤니티를<br>
+                                                    목표로 제작
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-3 p-2">
                                         <div class="platform-box platform-box--2">
-                                            <div class="thumb"><img :src="require('@/assets/img/Main/System.jpg')" alt=""></div>
+                                            <div class="thumb"><img :src="require('@/assets/img/CustomSolutions/Main.png')" alt=""></div>
                                             <div class="desc">
-                                                <h3 class="title">플랫폼 통합</h3>
+                                                <h3 class="title">맞춤형 제작</h3>
                                                 <p class="text">
-                                                    다양한 환경의 기간 시스템을 동일한<br>
-                                                    플랫폼으로 통합
+                                                    아이디어와 비즈니스 목표를 이해하고<br>
+                                                    차별화된 맞춤형 웹 사이트 제작
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-3 p-2">
                                         <div class="platform-box platform-box--2">
-                                            <div class="thumb"><img :src="require('@/assets/img/Main/Development.jpg')" alt=""></div>
+                                            <div class="thumb"><img :src="require('@/assets/img/Main/System.png')" alt=""></div>
                                             <div class="desc">
                                                 <h3 class="title">모바일 시스템 개발</h3>
-                                                <p class="text">기존 시스템의 DB 활용하여 모바일
-                                                    시스템 개발 및 운영
+                                                <p class="text">기존 시스템의 DB 활용하여 모바일 시스템 개발 및 운영
                                                 </p>
                                             </div>
                                         </div>
