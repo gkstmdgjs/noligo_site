@@ -23472,10 +23472,6 @@ a.bg-dark:focus,a.bg-dark:hover,button.bg-dark:focus,button.bg-dark:hover {
         padding: 5rem!important
     }
 
-    .pt-lg-20,.py-lg-20 {
-        padding-top: 5rem!important
-    }
-
     .pr-lg-20,.px-lg-20 {
         padding-right: 5rem!important
     }
@@ -39855,7 +39851,7 @@ html {
 
 .card-wrap {
     padding: 2.5em 3.75em;
-    background-color: rgba(243,109,66,0.06)
+    background-color: rgb(66 139 243 / 6%);
 }
 
 @media screen and (max-width: 1200px) {
@@ -39891,19 +39887,19 @@ html {
 }
 
 .card.card--1 {
-    border: 1px solid #f47643
+    border: 1px solid #4075d7;
 }
 
 .card.card--1 .card-head {
-    background-color: #f47643
+    background-color: #4075d7;
 }
 
 .card.card--2 {
-    border: 1px solid #f4aa00
+    border: 1px solid #0191d0;
 }
 
 .card.card--2 .card-head {
-    background-color: #f4aa00
+    background-color: #0191d0;
 }
 
 .card.card--3 .card-body {
@@ -43554,9 +43550,14 @@ html {
 }
 
 .btn-border-01 {
+    transition-duration: 0.4s;
     background-color: #fff;
     color: #4075d7;
     border: 1px solid #4075d7
+}
+.btn-border-01:hover{
+    background-color: #4075d7;
+    color:#fff;
 }
 
 .btn-type-02 {

@@ -4,20 +4,7 @@
 	 * 설명 : 노리고 게임즈
 	 */
 
-  import { onMounted } from 'vue';
   import { Swiper, SwiperSlide } from 'swiper/vue';
-  import SwiperCore, { Navigation, Pagination, loop } from 'swiper/core';
-  import AOS from 'aos';
-  import 'aos/dist/aos.css';
-  
-  SwiperCore.use([Navigation, Pagination, loop]);
-
-  onMounted(() => {
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-    });
-  });
 </script>
 <template>
   <!----------------------------------------------------- 중단 메인 이미지 부분 ----------------------------------------------------->

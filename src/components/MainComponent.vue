@@ -4,12 +4,11 @@
 	 * 설명 : 메인 화면
 	 */
 
-    import { Swiper, SwiperSlide } from 'swiper/vue';
-    import SwiperCore, {Navigation, Pagination, loop} from 'swiper/core';
+
     import { onMounted, ref } from 'vue';
     import { InitPage } from './Common/common';
-
-    SwiperCore.use([Navigation, Pagination, loop]);
+    import { Swiper, SwiperSlide } from 'swiper/vue';
+    
     const data = ref([]);
 
     onMounted(async () => {
@@ -67,8 +66,8 @@
                                         <div class="platform-box">
                                             <div class="thumb"><img :src="require('@/assets/img/Main/Development.jpg')" alt=""></div>
                                             <div class="desc">
-                                                <h3 class="title">주요 기능</h3>
-                                                <p class="text">개발의 편의성 및 운영의 중점</p>
+                                                <h3 class="title">개발의 편의성</h3>
+                                                <p class="text">운영을 중점으로 다양한 플랫폼 제공</p>
                                             </div>
                                         </div>
                                     </div>
@@ -78,7 +77,7 @@
                             <swiper-slide class="swiper-slide-padding">
                                 <div class="section-title text-center mb-6 mb-lg-10 mb-xl-14">
                                     <h1 class="main-title--h1 text-white">HS 솔루션</h1>
-                                    <p class="main-text--18 text-gray-a">오픈 라이선스(NodeJS, MSSQL) 기반 웹/모바일 통합 개발 운영 환경 구성</p>
+                                    <p class="main-text--18 text-gray-a">오픈 라이선스(JS, NodeJS, PHP, MYSQL, MSSQL) 기반 웹/모바일 통합 개발 운영 환경 구성</p>
                                     <router-link to="/FrameworkComponent" class="read-more type-white" title="더보기">
                                         <span class="text">READ MORE</span>
                                         <span class="ex"></span>
@@ -111,7 +110,7 @@
                                     </div>
                                     <div class="col-12 col-lg-3 p-2">
                                         <div class="platform-box platform-box--2">
-                                            <div class="thumb"><img :src="require('@/assets/img/CustomSolutions/Main.png')" alt=""></div>
+                                            <div class="thumb"><img :src="require('@/assets/img/Main/Customization.jpg')" alt=""></div>
                                             <div class="desc">
                                                 <h3 class="title">맞춤형 제작</h3>
                                                 <p class="text">

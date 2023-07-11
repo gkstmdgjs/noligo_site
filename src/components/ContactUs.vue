@@ -428,7 +428,7 @@
               </tbody>
             </table>
             <div class="board_btn_bx text_center mt_30">
-              <button class="btn-type-01" @click="Inquiry">문의하기</button>
+              <button class="btn-border-01 py-3 px-15" @click="Inquiry">문의하기</button>
             </div>
           </div>
         </div>

@@ -116,7 +116,7 @@
         <router-link to="/" class="logo d-inline-flex align-items-center h-100" title="메인으로">
           <img src="@/assets/img/logo.png" alt="HS 솔루션" class="origin">
         </router-link>
-        <div class="nav__bg" style="height: 115px"></div>
+        <div class="nav__bg" style="height: 120px"></div>
           <nav class="nav gnb-drop--all">
             <ul class="nav-list nav-list--depth1">
               <!------------------------------ about ------------------------------->
